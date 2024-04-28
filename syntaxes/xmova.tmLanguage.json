@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Xmova",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#primitivos"
+		},
+		{
+			"include": "#keys"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.xmova",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"primitivos": {
+			"patterns": [{
+				"name": "primitivo.control.xmova",
+				"match": "\\b(int|String|inc|long)\\b"
+			}]
+		},
+		"kyes": {
+			"patterns": [{
+				"name": "key.control.xmova",
+				"match": "sync=out|sync=in|sync|cleanupDays=|uuid"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.xmova",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.xmova",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "model.xmv"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "xmova-language",
+  "displayName": "Xmova Language",
+  "description": "Support for Language Xmova",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "publisher": "RaphaelMolina",
+  "contributes": {
+    "languages": [{
+      "id": "xmova",
+      "aliases": ["Xmova", "xmova"],
+      "extensions": [".xmv"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xmova",
+      "scopeName": "model.xmv",
+      "path": "./syntaxes/xmova.tmLanguage.json"
+    }]
+  }
+}
