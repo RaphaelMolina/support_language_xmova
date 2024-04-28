@@ -20,7 +20,8 @@
 			"patterns": [{
 				"name": "keyword.control.xmova",
 				"match": "\\b(if|while|for|return)\\b"
-			}]
+			}
+		]
 		},
 		"primitivos": {
 			"patterns": [{
