@@ -6,12 +6,6 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#primitivos"
-		},
-		{
-			"include": "#keys"
-		},
-		{
 			"include": "#strings"
 		}
 	],
@@ -19,20 +13,8 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.xmova",
-				"match": "\\b(if|while|for|return)\\b"
-			}
-		]
-		},
-		"primitivos": {
-			"patterns": [{
-				"name": "primitivo.control.xmova",
-				"match": "\\b(int|String|inc|long)\\b"
-			}]
-		},
-		"kyes": {
-			"patterns": [{
-				"name": "key.control.xmova",
-				"match": "sync=out|sync=in|sync|cleanupDays=|uuid"
+				"match": "\\b(if|while|for|return|App|location|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background)\\b"
+
 			}]
 		},
 		"strings": {
