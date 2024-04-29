@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.xmova",
-				"match": "\\b(if|while|for|return|App|location|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField=tipoData|onlineFlagCreate|autoFill=|select|from|where|selectFirst|save|record|hide|text|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|onValidate)\\b"
+				"match": "\\b(if|while|for|return|App|setInfoView|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|events|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField|tipoData|onlineFlagCreate|autoFill=|select|from|where|selectFirst|save|record|hide|text|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|onValidate|Auth|AuthInput|notSavedMessage|autoFillWhenOneItem|onlineValidate|listRecord|beforeInstall|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|Finish|afterFinish|VALUES|NULL|dropTable|beforeFinish|generateuuid|toast|@)\\b"
 
 			}]
 		},
@@ -29,5 +29,5 @@
 			]
 		}
 	},
-	"scopeName": "model.xmv"
+	"scopeName": "source.xmv"
 }

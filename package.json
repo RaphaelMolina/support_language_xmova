@@ -3,7 +3,7 @@
   "displayName": "Xmova Language",
   "description": "Support for Language Xmova",
   "icon": "img/Logo.png",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -20,7 +20,7 @@
     }],
     "grammars": [{
       "language": "xmova",
-      "scopeName": "model.xmv",
+      "scopeName": "source.xmv",
       "path": "./syntaxes/xmova.tmLanguage.json"
     }]
   }
