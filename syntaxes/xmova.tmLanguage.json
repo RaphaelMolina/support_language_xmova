@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.xmova",
-				"match": "\\b(if|while|for|return|App|location|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background)\\b"
+				"match": "\\b(if|while|for|return|App|location|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField=tipoData|onlineFlagCreate|autoFill=|select|from|where|selectFirst|save|record|hide|text|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|onValidate)\\b"
 
 			}]
 		},
