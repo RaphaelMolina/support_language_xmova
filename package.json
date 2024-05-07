@@ -4,6 +4,10 @@
   "description": "Support for Language Xmova",
   "icon": "img/Logo.png",
   "version": "0.0.14",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaphaelMolina/support_language_xmova"
+  },
   "engines": {
     "vscode": "^1.88.0"
   },
