@@ -1,33 +1,50 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Xmova",
+	"scopeName": "source.xmv",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.xmova",
-				"match": "\\b(if|while|for|return|App|setInfoView|String|int|inc|long|sync=out|tracking|string|Str|==|=|now|Now|Date|false|true|List|afterFill|notFill|boolean|notShowNo|fillCondition|fieldEvents|events|filterListRecord|getInputScreenLabel|ignoreExternal|autoFill|sync=in|else|notBack|notShowYes|null|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField|tipoData|onlineFlagCreate|autoFill=|select|from|where|selectFirst|save|record|hide|text|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|onValidate|Auth|AuthInput|notSavedMessage|autoFillWhenOneItem|onlineValidate|listRecord|beforeInstall|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|Finish|afterFinish|VALUES|NULL|dropTable|beforeFinish|generateuuid|toast|@)\\b"
-
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.xmova",
-			"begin": "\"",
-			"end": "\"",
+            "name": "comment.line.double-slash",
+            "match": "//.*$"
+        },
+        {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.double",
 			"patterns": [
 				{
 					"name": "constant.character.escape.xmova",
 					"match": "\\\\."
 				}
 			]
-		}
-	},
-	"scopeName": "source.xmv"
+        },
+        {
+            "match": "\\b(log|true|false|null|[_][A-Za-z]*)\\b",
+            "name": "constant.language"
+        },
+        {
+            "match": "\\b\\d+\\b",
+            "name": "constant.numeric"
+        },
+        {
+            "match": "\\b(if|else|for|while|return|in)\\b",
+            "name": "keyword.control"
+        },
+        {
+        "match": "\\b(path|double|date|fillAuth|Batterylevel|Binary|boolean|Boolean|Bool|Bytes|Date|Decimal|Double|Entity|Float|inc|Integer|int|List|Location|Long|long|Now|now|ReceivedFile|string|String|Str|Text|text)\\b",
+            "name": "support.type"
+        },
+        {
+            "match": "\\b(onValidate|actions|views|syncConfig|afterSync|OnStart|fieldEvents|events|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|filterListRecord)\\b",
+            "name": "entity.name.function"
+        },
+        {
+            "name": "keyword",
+            "match": "\\b(setInfoView|sync=out|tracking|==|=|notFill|notfill|notShowNo|getInputScreenLabel|ignoreExternal|sync=in|fillCondition=|picture|setStatusColor|autofill=|notBack|notShowYes|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField|tipoData|onlineFlagCreate|select|from|where|selectFirst|save|record|hide|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|Auth|AuthInput|notSavedMessage|autoFillWhenOneItem|listRecord|beforeInstall|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|Finish|VALUES|dropTable|NULL|generateuuid|toast|setAlertTimer|totalTime=|stopAlertTimer|types=|syncInterval|waitForNetworkTimeout|show|type=|inputEntity=|install|reader|minSpeed|actionBarSubtitle|@|connectionTimeout|readTimeout|periodicSync|main|entity=|fields=|crud|exit|Vars|Constants|InstallData|recordDetail|beforeClose|beforeInit|recordList|getRecords=|numerickeyboard|notFormatThousand|concat|custom|EntityLabel|FieldOnlineValidateFail|FieldOnlineValidateError|FieldLabel|ScreenActionLabel|Main|CrudCreateConfirmMessage|CrudOptionsActionLabel|BooleanInputScreenYesActionLabel|BooleanInputScreenNoActionLabel|BooleanInputScreenBackActionLabel|FixedKeyAppVersion|FixedKeyMsgEmptyList|FixedKeyCrudCreateConfirmMessage|FixedKeyInputKeyboardDecimalSymbol|memory|descriptionFields=|searchFields=|emptyVerify=|currentDate|favorite|autoInitializeNew|finishOnEndLoop|backgroundIn|playSound|hasFixedPoint|externalName=|getWeekDay|simpleDateFormat|messageScheduled|EmptyVerify=|SelectFirst|FROM|Where|notSync|defaultValue=|viewAsColorIcon=|toggleColorIcon|fill|isVisible|WHERE|inactive)\\b"
+        },
+        {
+            "match": "\\b[A-Z]\\w*\\b",
+            "name": "variable.language"
+        }
+	]
 }
