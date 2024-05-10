@@ -3,7 +3,7 @@
   "displayName": "Xmova Language",
   "description": "Support for Language Xmova",
   "icon": "img/Logo.png",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "repository": {
     "type": "git",
     "url": "https://github.com/RaphaelMolina/support_language_xmova"
@@ -20,7 +20,11 @@
       "id": "xmova",
       "aliases": ["Xmova", "xmova"],
       "extensions": [".xmv"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "icons/icon.svg",
+        "dark": "icons/icon.svg"
+      }
     }],
     "grammars": [{
       "language": "xmova",
