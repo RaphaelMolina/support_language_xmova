@@ -4,47 +4,81 @@
 	"scopeName": "source.xmv",
 	"patterns": [
 		{
+            "comment": "Azul Escuro - Comentário",
             "name": "comment.line.double-slash",
             "match": "//.*$"
         },
         {
+            "comment": "Amarelo - String",
             "begin": "\"",
             "end": "\"",
             "name": "string.quoted.double",
 			"patterns": [
 				{
-					"name": "constant.character.escape.xmova",
+					"name": "constant.character.escape",
 					"match": "\\\\."
 				}
 			]
         },
         {
-            "match": "\\b(log|true|false|null|[_][A-Za-z]*)\\b",
-            "name": "constant.language"
+            "comment": "Roxo - Variável Global",
+            "name": "variable.language",
+            "match": "\\b([_][A-Za-z]*)\\b"
         },
-        {
-            "match": "\\b\\d+\\b",
-            "name": "constant.numeric"
+        {   
+            "comment": "Vermelho - Caracteres Especiais",
+            "name": "markup.deleted",
+            "match": "[^a-zA-Z0-9À-Üà-ü]|\\[|\\]|\\(|\\)|{|}"
         },
-        {
-            "match": "\\b(if|else|for|while|return|in)\\b",
-            "name": "keyword.control"
-        },
-        {
-        "match": "\\b(path|double|date|fillAuth|Batterylevel|Binary|boolean|Boolean|Bool|Bytes|Date|Decimal|Double|Entity|Float|inc|Integer|int|List|Location|Long|long|Now|now|ReceivedFile|string|String|Str|Text|text)\\b",
-            "name": "support.type"
-        },
-        {
-            "match": "\\b(onValidate|actions|views|syncConfig|afterSync|OnStart|fieldEvents|events|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|filterListRecord)\\b",
-            "name": "entity.name.function"
-        },
-        {
+        {   
+            "comment": "Rosa - Palavras Chaves",
             "name": "keyword",
-            "match": "\\b(setInfoView|sync=out|tracking|==|=|notFill|notfill|notShowNo|getInputScreenLabel|ignoreExternal|sync=in|fillCondition=|picture|setStatusColor|autofill=|notBack|notShowYes|sync|inlineData|background|cleanupDays=|appCode=|offlineDate=|name|clearOptionMenu|password=|logo|camera|resolution=|name=|server|in|minTime|maxCacheTime|minDistance|disableNotifyMessage|required|cleanupDays=|lang=custom|vars=|timeTypeField|tipoData|onlineFlagCreate|select|from|where|selectFirst|save|record|hide|maxLength=|UPDATE|SET|INSERT|INTO|onGetDefaultInputValue|Auth|AuthInput|notSavedMessage|autoFillWhenOneItem|listRecord|beforeInstall|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|Finish|VALUES|dropTable|NULL|generateuuid|toast|setAlertTimer|totalTime=|stopAlertTimer|types=|syncInterval|waitForNetworkTimeout|show|type=|inputEntity=|install|reader|minSpeed|actionBarSubtitle|@|connectionTimeout|readTimeout|periodicSync|main|entity=|fields=|crud|exit|Vars|Constants|InstallData|recordDetail|beforeClose|beforeInit|recordList|getRecords=|numerickeyboard|notFormatThousand|concat|custom|EntityLabel|FieldOnlineValidateFail|FieldOnlineValidateError|FieldLabel|ScreenActionLabel|Main|CrudCreateConfirmMessage|CrudOptionsActionLabel|BooleanInputScreenYesActionLabel|BooleanInputScreenNoActionLabel|BooleanInputScreenBackActionLabel|FixedKeyAppVersion|FixedKeyMsgEmptyList|FixedKeyCrudCreateConfirmMessage|FixedKeyInputKeyboardDecimalSymbol|memory|descriptionFields=|searchFields=|emptyVerify=|currentDate|favorite|autoInitializeNew|finishOnEndLoop|backgroundIn|playSound|hasFixedPoint|externalName=|getWeekDay|simpleDateFormat|messageScheduled|EmptyVerify=|SelectFirst|FROM|Where|notSync|defaultValue=|viewAsColorIcon=|toggleColorIcon|fill|isVisible|WHERE|inactive)\\b"
+            "match": "\\b(appCode|alertTimer|darkTheme|dateOneScreen|diskMinSpaceMB|diskToleranceSpaceMB|retainLogFilesInDisk|multiLang|networkWait|networkTimeout|notResetWifi|offlineDate|periodicSync|simulateCorruptedSource|confirmDeviceDateHour|title|main|entity|message|messageField|dateField|fromField|tableLayout|webView|fullScreen|afterSync|afterUpdate|beforeUpdate|buffer|bluetooth|camera|clearOptionMenu|settingsOptionMenu|defaultFormat|getDeviceName|location|Location|logo|mainInfo|messageAlert|networkReset|onStart|onExit|pictureAnytime|reader|support|syncOptionMenu|serverUrl|updateUrl|syncConfig|install|name|SEQ_DB_DEVICE_MASTER|SEQ_DB_DEVICE|Auth|Vars|Constants|InstallData|EntityLabel|FieldOnlineValidateFail|FieldOnlineValidateError|FieldLabel|ScreenActionLabel|Main|CrudCreateConfirmMessage|CrudOptionsActionLabel|BooleanInputScreenYesActionLabel|BooleanInputScreenNoActionLabel|BooleanInputScreenBackActionLabel|FixedKeyAppVersion|FixedKeyMsgEmptyList|FixedKeyCrudCreateConfirmMessage|FixedKeyInputKeyboardDecimalSymbol|EmptyVerify|notFill|notfill|notShowNo|ignoreExternal|autofill|notBack|notShowYes|inlineData|cleanupDays|server|maxCacheTime|disableNotifyMessage|cleanupDays|langcustom|timeTypeField|onlineFlagCreate|record|hide|maxLength|onGetDefaultInputValue|notSavedMessage|autoFillWhenOneItem|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|setAlertTimer|totalTime|show|minSpeed|actionBarSubtitle|numerickeyboard|notFormatThousand|memory|descriptionFields|searchFields|emptyVerify|favorite|autoInitializeNew|finishOnEndLoop|backgroundIn|hasFixedPoint|externalName|getWeekDay|messageScheduled|notSync|defaultValue|viewAsColorIcon|toggleColorIcon|inactive|chave|confirm|decimalSize|id)\\b"
         },
         {
-            "match": "\\b[A-Z]\\w*\\b",
-            "name": "variable.language"
+            "comment": "Rosa Negrito - Palavras Chaves Valores",
+            "name": "keyword.operator.new",
+            "match": "\\b(timerInterval|Device|Manual|syncInterve|AuthInput|fillAuth|Finish|tipoDataFim)\\b"
+        },
+        {
+            "comment": "Rosa - Condicionais",
+            "name": "keyword.control",
+            "match": "\\b(if|else|for|while|return|in)\\b"
+        },
+        {
+            "comment": "Verde - Palavras Chaves",
+            "name": "entity.other.attribute-name",
+            "match": "\\b(views|events|actions|getRecord|fontssize|titlefontssize|button|label|style|primary|margins|onClick|default|success|warning|info|danger|beforeInit|beforeClose|aligments|loadUrl|postVars|post|onHttpError|recordList|recordDetail|onValidate|OnStart|fieldEvents|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|filterListRecord|getInputScreenLabel|screens|isVisible|fill|BeforeSyncFirstRecord|beforeSyncSave)\\b"
+        },
+        {
+            "comment": "Laranja - Palavras Chaves",
+            "name": "markup.changed",
+            "match": "\\b(maxFileSizeMB|maxFilesToKeep|saveBinary|sender|receiver|fileReceiver|password|restorePassword|maxBackupDays|quality|resolution|format|minTime|minDistance|minLastTime|tracking|onInsert|phoneNumber|hidePendingRecords|soundLoop|vibrateTime|vibrationLoop|sound|none|BarcodeError|AlertTimer|BarcodeRead|camera|minQuality|types|sizes|type|required|minBearing|syncInterval|waitForNetworkTimeout|connectionTimeout|readTimeout|httpStatusCode|originalCode|fields|labels|Back|sync|exit|ok|Ok|getRecords|inputEntity|listRecord|lang|onGetItemIconColor|OnGetItemBackgroundColor|stopAlertTimer|stopSound|cancelSchedule|save|setStatusColor|concat|SumField|toast|select|from|UPDATE|SET|INSERT|INTO|VALUES|SelectFirst|FROM|From|Where|WHERE|where|selectFirst|AND|and|dateToMilli|vars|simpleDateFormat|background|actionbarsubtitle|playSound|yesLabel|noLabel|timeout|timeoutExceededValue|backOnlyAfterNo|CrudBack|crud|setInfoView|dropTable|schedule|time|finishRecord|addDate|Select)\\b"
+        },
+        {
+            "comment": "Laranja Negrito - Valores",
+            "name": "markup.bold",
+            "match": "\\b(PARTIAL|EAN8|UPCE|ISBN10|UPCA|EAN13|ISBN13|I25|DATABAR|DATABAR_EXP|CODABAR|CODE39|PDF417|QRCODE|CODE93|CODE128|manualDecimal|logo_simova|LEFT|CENTER|RIGHT|verifyEmptyEntity|out|tipoData|currentDate|generateuuid|custom|cam|BarcodeBeep|beforeInstall)\\b"
+        },
+        {
+            "comment": "Azul Claro - Tipo de Dados",
+            "name": "support",
+            "match": "\\b(path|double|date|fillAuth|Batterylevel|Binary|boolean|Boolean|Bool|Bytes|Date|Decimal|Double|Entity|Float|inc|Integer|int|List|Location|Long|long|Now|now|ReceivedFile|string|String|Str|Text|text|picture|decimal)\\b"
+        },
+        {
+            "comment": "Azul Claro - Números",
+            "name": "markup.underline.link",
+            "match": "\\b\\d+\\b"
+        },
+        {
+            "comment": "Roxo - Log e Valores",
+            "name": "support.constant",
+            "match": "\\b(log|true|false|null|NULL)\\b"
+        },
+        {
+            "comment": "Roxo - Entidades",
+            "name": "markup.heading",
+            "match": "\\b[A-Z]\\w*\\b"
         }
 	]
 }
