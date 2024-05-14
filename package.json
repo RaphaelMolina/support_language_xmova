@@ -3,7 +3,7 @@
   "displayName": "Xmova Language",
   "description": "Support for Language Xmova",
   "icon": "img/Logo.png",
-  "version": "0.0.16",
+  "version": "0.0.18",
   "repository": {
     "type": "git",
     "url": "https://github.com/RaphaelMolina/support_language_xmova"
@@ -30,6 +30,10 @@
       "language": "xmova",
       "scopeName": "source.xmv",
       "path": "./syntaxes/xmova.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "xmova",
+      "path": "./snippets/snippets.json"
     }]
   }
 }

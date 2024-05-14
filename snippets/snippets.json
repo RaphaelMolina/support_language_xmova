@@ -1,0 +1,1646 @@
+{
+    "appCode": {
+        "prefix": "appCode",
+        "body": "appCode",
+        "description": "Texto utilizado para definir o tipo de aplicativo. (ex.: appCode=L)"
+    },
+    "alertTimer": {
+        "prefix": "alertTimer",
+        "body": "alertTimer",
+        "description": "Habilita a funcionalidade de verificação de alerta."
+    },
+    "timerInterval": {
+        "prefix": "timerInterval",
+        "body": "timerInterval",
+        "description": "Define o intervalo de tempo que a função alertTimer será chamada. (ex.: alertTimer timerInterval=1m)"
+    },
+    "darkTheme": {
+        "prefix": "darkTheme",
+        "body": "darkTheme",
+        "description": "Modifica todo o aplicativo para usar o tema escuro. Ideal para usar em local com muita claridade."
+    },
+    "dateOneScreen": {
+        "prefix": "dateOneScreen",
+        "body": "dateOneScreen",
+        "description": "Habilita a inserção de data manual usando tela de data do android."
+    },
+    "diskMinSpaceMB": {
+        "prefix": "diskMinSpaceMB",
+        "body": "diskMinSpaceMB",
+        "description": "Define a tolerância para fechar a aplicação ao iniciá-la, pois disco está em estado crítico, valor padrão é 20. Deve ser usado junto ao diskToleranceSpaceMB. (ex.: diskMinSpaceMB=20)"
+    },
+    "diskToleranceSpaceMB": {
+        "prefix": "diskToleranceSpaceMB",
+        "body": "diskToleranceSpaceMB",
+        "description": "Define tolerância de alerta de disco, deve ser usado junto ao diskMinSpaceMB, valor padrão é 30. (ex.: diskToleranceSpaceMB=30)"
+    },
+    "retainLogFilesInDisk": {
+        "prefix": "retainLogFilesInDisk",
+        "body": "retainLogFilesInDisk",
+        "description": "Define a quantidade de arquivos de log a serem mantidos no disco. Valor default=5."
+    },
+    "multiLang": {
+        "prefix": "multiLang",
+        "body": "multiLang",
+        "description": "Habilita a função de multiplos idiomas."
+    },
+    "networkWait": {
+        "prefix": "networkWait",
+        "body": "networkWait",
+        "description": "Define o tempo para espera para tentar conectar com o servidor. (ex.: networkWait=4s)"
+    },
+    "networkTimeout": {
+        "prefix": "networkTimeout",
+        "body": "networkTimeout",
+        "description": "Define o tempo para espera de resposta do servidor, após conectado.(ex.: networkTimeout=15s)"
+    },
+    "notResetWifi": {
+        "prefix": "notResetWifi",
+        "body": "notResetWifi",
+        "description": "Usado para desabilitar o reset do WIFI quando houver um erro no sincronismo."
+    },
+    "offlineDate": {
+        "prefix": "offlineDate",
+        "body": "offlineDate",
+        "description": "Define o tipo de data que o sistema utilizará caso não consiga obter data do servidor ou gps. (ex.: offlineDate=Device ou offlineDate=Manual) (default = Device)"
+    },
+    "periodicSync": {
+        "prefix": "periodicSync",
+        "body": "periodicSync",
+        "description": "Habilita o sincronismo periódico das entidades do tipo backgroundIn."
+    },
+    "syncInterval": {
+        "prefix": "syncInterval",
+        "body": "syncInterval",
+        "description": "Define o intervalo de tempo que será realizado o sincronismo. (ex.: periodicSync syncInterval=1m)"
+    },
+    "resetMobileData": {
+        "prefix": "resetMobileData",
+        "body": "resetMobileData",
+        "description": "Usado para habilitar o reset dos dados móveis quando houver um erro no sincronismo."
+    },
+    "resetWifi": {
+        "prefix": "resetWifi",
+        "body": "resetWifi",
+        "description": "Usado para habilitar o reset do WIFI quando houver um erro no sincronismo."
+    },
+    "simulateNoServer": {
+        "prefix": "simulateNoServer",
+        "body": "simulateNoServer",
+        "description": "Utilizado para teste. Permite a instalação do fluxo sem realizar o primeiro sincronismo. Utiliza os dados do installCode para as entidades sync=in."
+    },
+    "maxLogFileSizeMB": {
+        "prefix": "maxLogFileSizeMB",
+        "body": "maxLogFileSizeMB",
+        "description": "Utilizado para definir o valor que o arquivo de log deve ter para ser renomeado e compactado. Caso não seja definido o valor padrão é 5"
+    },
+    "mobileevents": {
+        "prefix": "mobileevents",
+        "body": "mobileevents",
+        "description": "Determina que sua aplicação irá salvar como SYNC_OUT códigos de representação de eventos ocorridos no dispositivo, é preciso especificar os eventos identificados com types. Exemplo: mobileevents types=1,2,3."
+    },
+    "VoiceToast": {
+        "prefix": "VoiceToast",
+        "body": "VoiceToast",
+        "description": "Determina se a aplicação irá utilizar o sintetizador do voz do aparelho para ler os toasts quando forem apresentados."
+    },
+    "airPlane": {
+        "prefix": "airPlane",
+        "body": "airPlane",
+        "description": "Determina se a aplicação irá ignorar o “Modo Avião” do dispositivo. Por padrão a aplicação mostra uma mensagem de erro e se fecha quando esse quando o modo avião está ativado."
+    },
+    "simulateCorruptedSource": {
+        "prefix": "simulateCorruptedSource",
+        "body": "simulateCorruptedSource",
+        "description": "Usado em testes para simular erro de Source corrompido. Ao utilizá-lo o fluxo começará a enviar uma flag junto da requisição de instalação e update de fluxo, fazendo o server retornar um source corrompido."
+    },
+    "confirmDeviceDateHour": {
+        "prefix": "confirmDeviceDateHour",
+        "body": "confirmDeviceDateHour",
+        "description": "Usado para ativar a confirmação da data/hora manual, comparando com a data do celular."
+    },
+    "afterSync": {
+        "prefix": "afterSync",
+        "body": "afterSync",
+        "description": "Realiza o evento após realizar o sincronismo."
+    },
+    "afterUpdate": {
+        "prefix": "afterUpdate",
+        "body": "afterUpdate",
+        "description": "Realiza a instrução após realizar a atualização de versão."
+    },
+    "beforeUpdate": {
+        "prefix": "beforeUpdate",
+        "body": "beforeUpdate",
+        "description": "Realiza a instrução antes de realizar a atualização de versão. Caso retorne falso, não permite atualizar o fluxo, exibindo uma mensagem para o usuário."
+    },
+    "buffer": {
+        "prefix": "buffer",
+        "body": "buffer",
+        "description": "Permite a configuração de como deve se comportar a rotina de buffer para este aplicativo."
+    },
+    "maxFileSizeMB": {
+        "prefix": "maxFileSizeMB",
+        "body": "maxFileSizeMB",
+        "description": "Determina qual o tamanho máximo que o arquivo pode atingir antes de ser renomeado e compactado. (Padrão: 5)"
+    },
+    "maxFilesToKeep": {
+        "prefix": "maxFilesToKeep",
+        "body": "maxFilesToKeep",
+        "description": "Determina quantos arquivos deverão ser mantidos em disco, além do arquivo corrente de buffer. (Padrão: 5)"
+    },
+    "saveBinary": {
+        "prefix": "saveBinary",
+        "body": "saveBinary",
+        "description": "Determina se deve ser salvo o valor dos dados binários no formato ‘String Base 64’ no arquivo de buffer. Por padrão quando o atributo não está presente não são salvos os dados binários no buffer."
+    },
+    "bluetooth": {
+        "prefix": "bluetooth",
+        "body": "bluetooth",
+        "description": "veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#bluetooth-ref"
+    },
+    "sender": {
+        "prefix": "sender",
+        "body": "sender",
+        "description": "Habilita a função de envio de dados via bluetooth aplicativos xmova."
+    },
+    "receiver": {
+        "prefix": "receiver",
+        "body": "receiver",
+        "description": "Habilita a função de recebimento de dados via bluetooth aplicativos xmova."
+    },
+    "fileReceiver": {
+        "prefix": "fileReceiver",
+        "body": "fileReceiver",
+        "description": "Habilita a função de recebimento de arquivo via bluetooth aplicativo xmova e PegaDados."
+    },
+    "restorePassword": {
+        "prefix": "restorePassword",
+        "body": "restorePassword",
+        "description": "Usado para definir uma senha numérica, usada para reenviar os dados via bluetooth (default: 123). (ex.: bluetooth sender password=456)."
+    },
+    "maxBackupDays": {
+        "prefix": "maxBackupDays",
+        "body": "maxBackupDays",
+        "description": "Usado para estipular a quantidade de dias que o backup do bluetooth deve ser mantido, caso não seja informado o padrão é 90 dias."
+    },
+    "quality": {
+        "prefix": "quality",
+        "body": "quality",
+        "description": "Configura a qualidade da imagem gravada quando tira foto. (ex.: camera quality=20)."
+    },
+    "resolution": {
+        "prefix": "resolution",
+        "body": "resolution",
+        "description": "Configura a resolução da imagem gravada quando tira foto. (ex.: camera resolution=480)."
+    },
+    "clearOptionMenu password": {
+        "prefix": "clearOptionMenu password",
+        "body": "clearOptionMenu password",
+        "description": "Usado para definir uma senha numérica para que se possa usar a opção de limpar o fluxo (default: 123). (ex.: clearOptionMenu password=456)."
+    },
+    "settingsOptionMenu password": {
+        "prefix": "settingsOptionMenu password",
+        "body": "settingsOptionMenu password",
+        "description": "Usado para definir uma senha numérica para acesso as configurações do aplicativo (default: 123). Esta tela permite alterar o lado do teclado (visando canhotos), alterar o tempo do timeout de sincronização etc."
+    },
+    "defaultFormat format": {
+        "prefix": "defaultFormat format",
+        "body": "defaultFormat format",
+        "description": "Usado para definir a formatação dos números decimais, por padrão os números decimais são formatados automaticamente, caso este atributo seja usado será desabilitada a formatação automática dos números decimais. (ex.: defaultFormat format=manualDecimal)."
+    },
+    "getDeviceName": {
+        "prefix": "getDeviceName",
+        "body": "getDeviceName",
+        "description": "Define o nome do aparelho que será apresentado para seleção na lista de bluetooth."
+    },
+    "location": {
+        "prefix": "location",
+        "body": "location",
+        "description": "veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#location-ref"
+    },
+    "minTime": {
+        "prefix": "minTime",
+        "body": "minTime",
+        "description": "Intervalo de tempo para o core atualizar a posição atual do GPS."
+    },
+    "minDistance": {
+        "prefix": "minDistance",
+        "body": "minDistance",
+        "description": "Distância mínima para o core atualizar a posição atual do GPS."
+    },
+    "minLastTime": {
+        "prefix": "minLastTime",
+        "body": "minLastTime",
+        "description": "É o tempo da última posição válida obtida do GPS que o apontamento pode utilizar."
+    },
+    "tracking": {
+        "prefix": "tracking",
+        "body": "tracking",
+        "description": "Habilita o rastreamento. Deve adicionar minDistance = 0m. O minTime` também deve ser configurado, e seu valor deve ser maior que zero."
+    },
+    "onInsert": {
+        "prefix": "onInsert",
+        "body": "onInsert",
+        "description": "Utilizado para adicionar informações adicionais no apontamento."
+    },
+    "logo": {
+        "prefix": "logo",
+        "body": "logo",
+        "description": "Define o logo apresentado nas configurações que é exibido em todos os menus. (default: logo_simova)(ex.: logo name=descricao_do_logo). Devido a implementação o logo somente será obtido na instalação do fluxo. Caso o arquivo logo seja alterado mas mantenha o mesmo nome, ele não será baixado novamente. Somente será alterado no aplicativo se o nome do arquivo for diferente do anterior."
+    },
+    "mainInfo": {
+        "prefix": "mainInfo",
+        "body": "mainInfo",
+        "description": "Usado para atributos de controle da tela Main (tela inicial ou abaixo do menu do boletim)"
+    },
+    "phoneNumber": {
+        "prefix": "phoneNumber",
+        "body": "phoneNumber",
+        "description": "Colocando esse atributo o número do telefone será exibido na tela Main (Somente se houver suporte do SimCard e permissão de API)."
+    },
+    "hidePendingRecords": {
+        "prefix": "hidePendingRecords",
+        "body": "hidePendingRecords",
+        "description": "Atributo usado para ocultar a informação de registros pendentes da tela de informações."
+    },
+    "messageAlert sound": {
+        "prefix": "messageAlert sound",
+        "body": "messageAlert sound",
+        "description": "Usado para definir o som a ser tocado quando a mensagem for recebida (default: BarcodeBeep). Opções disponíveis: none, BarcodeBeep, BarcodeError, AlertTimer, BarcodeRead. (ex.: messageAlert sound=none)."
+    },
+    "messageAlert soundLoop": {
+        "prefix": "messageAlert soundLoop",
+        "body": "messageAlert soundLoop",
+        "description": "Usado para definir a quantidade de vezes que o som será tocado (default: 2). (ex.: messageAlert soundLoop=3)."
+    },
+    "messageAlert vibrateTime": {
+        "prefix": "messageAlert vibrateTime",
+        "body": "messageAlert vibrateTime",
+        "description": "Usado para definir quanto tempo irá durar cada vibração (default: 1s). (ex.: messageAlert vibrateTime=3s)."
+    },
+    "messageAlert vibrationLoop": {
+        "prefix": "messageAlert vibrationLoop",
+        "body": "messageAlert vibrationLoop",
+        "description": "Usado para definir a quantidade de vezes que a vibração irá ocorrer (default: 2). (ex.: messageAlert vibrationLoop=3)."
+    },
+    "networkReset minTime": {
+        "prefix": "networkReset minTime",
+        "body": "networkReset minTime",
+        "description": "Define o tempo mínimo após o reset da rede (wifi/mobile data) o aplicativo deve resetar novamente a rede se o sincronismo falhar (default 30m) (Somente é feito o reset da rede quando ResetMobileData e/ou ResetWifi estão habilitados). (ex.: networkReset minTime=20m, networkReset minTime=1h)"
+    },
+    "onStart": {
+        "prefix": "onStart",
+        "body": "onStart",
+        "description": "Evento chamado ao entrar no aplicativo."
+    },
+    "onExit": {
+        "prefix": "onExit",
+        "body": "onExit",
+        "description": "Evento chamado ao sair do aplicativo."
+    },
+    "pictureAnytime": {
+        "prefix": "pictureAnytime",
+        "body": "pictureAnytime",
+        "description": "Habilita a opção de tirar foto a qualquer momento. Grava as fotos na galeria, e permite escolher no preenchimento de um campo do tipo Binary picture."
+    },
+    "reader camera minQuality": {
+        "prefix": "reader camera minQuality",
+        "body": [
+            "reader",
+            "\tcamera minQuality=0"
+        ],
+        "description": "Usado para definir a qualidade mínima aceitável de um código de barras lido pela camera, sendo 0 a qualidade máxima, 5 boa qualidade, 15 qualidade aceitável, 30 qualidade razoável, etc. Pode-se usar qualquer número. O default inicial era 3."
+    },
+    "reader camera types": {
+        "prefix": "reader camera types",
+        "body": [
+            "reader",
+            "\tcamera types=QRCODE"
+        ],
+        "description": "Lista com tipos de códigos de barras aceitos pela leitura. Estes são os tipos aceitos: PARTIAL,EAN8,UPCE,ISBN10,UPCA,EAN13,ISBN13,I25,DATABAR,DATABAR_EXP,CODABAR,CODE39,PDF417,QRCODE,CODE93,CODE128."
+    },
+    "reader camera sizes": {
+        "prefix": "reader camera sizes",
+        "body": [
+            "reader",
+            "\tcamera sizes=$1"
+        ],
+        "description": "Lista com quantidades de caracteres de códigos de barras aceitos pela leitura. O ideal é limitar para o padrão que será lido para não haver leituras falsas."
+    },
+    "support password": {
+        "prefix": "support password",
+        "body": "support password",
+        "description": "Usado para definir uma senha numérica, usada para enviar log ao suporte. (default 123). (ex.: support password=456)"
+    },
+    "syncOptionMenu": {
+        "prefix": "syncOptionMenu",
+        "body": "syncOptionMenu",
+        "description": "Usado para desabilitar (syncOptionMenu false) ou habilitar (syncOptionMenu true) a opção de sincronizar do menu principal (default habilitada)."
+    },
+    "serverUrl": {
+        "prefix": "serverUrl",
+        "body": "serverUrl",
+        "description": "Define url do servidor (ex.: serverUrl http://xmova-server-dev.simova.ws/x/m). Também é possível utilizar múltiplas URLs, deve ser usada da forma: serverUrl http://xmova-server-dev.simova.ws/x/m,http://url2.simova.ws/x/m,http:url3.simova.ws/x/m, ou seja, url1,url2,url3, sem espaços, apenas vírgula como separador. Sua regra funciona da seguinte forma: enquanto uma url possibilitar sincronismo irá utilizá-la, caso de erro irá para próxima até o final da lista, retornando ao começo e assim executando o processo novamente, semelhante ao elemento circular queue. Também é possível inserir um nano server, basta adicionar a url e ao seu início nano:, exemplo: nano:http://192.168.0.1"
+    },
+    "updateUrl": {
+        "prefix": "updateUrl",
+        "body": "updateUrl",
+        "description": "Define url de atualização do aplicativo. (ex.: updateUrl http://xmova-center-dev.simova.ws/xmova-center/update)"
+    },
+    "fontssize": {
+        "prefix": "fontssize",
+        "body": "fontssize",
+        "description": "Utilizado para definir o tamanho das fontes dos campos, utiliza a unidade Scale-independent Pixels (SP). Os dados são passados em forma de array, identificando os campos esquerda para a direita, caso algum campo não exista, define o valor 16sp (padrão). Valores aconselháveis para as fontes são em torno de 10 até 30, acima, pode ficar exageradamente grande."
+    },
+    "titlefontssize": {
+        "prefix": "titlefontssize",
+        "body": "titlefontssize",
+        "description": "Semelhante ao atributo fontssize, a diferença é que aplica a fonte aos títulos que identificam seus campos."
+    },
+    "style": {
+        "prefix": "style",
+        "body": "style",
+        "description": "Estilização do botão, aceita os tipos definidos, como no Bootstrap: primary, default, success (padrão), warning, info e danger."
+    },
+    "margins": {
+        "prefix": "margins",
+        "body": "margins",
+        "description": "Padrão html, default será 0,0,0,0 (top, right, bottom, left)."
+    },
+    "aligments": {
+        "prefix": "aligments",
+        "body": "aligments",
+        "description": "(LEFT|CENTER|RIGHT) Utilizado para definir o posicionamento do texto em cada coluna, o alinhamento deve respeitar a ordem dos campos a que será aplicado. No exemplo abaixo o primeiro campo será alinhado à esquerda e o segundo campo ao centro, o valor default do alinhamento caso não seja definido é ‘CENTER’."
+    },
+    "fullScreen": {
+        "prefix": "fullScreen",
+        "body": "fullScreen",
+        "description": "Quando presente faz com que o aplicativo ocupe toda a tela do dispositivo quando a tela de webView é exibida, ocultando a barra de notificação."
+    },
+    "title": {
+        "prefix": "title",
+        "body": "title",
+        "description": "Quando a propriedade ‘title‘ não é definida a Action Bar do aplicativo é ocultada."
+    },
+    "loadUrl": {
+        "prefix": "loadUrl",
+        "body": "loadUrl",
+        "description": "Evento responsável por retornar um texto que represente a url a ser acessada pelo WebView."
+    },
+    "postVars": {
+        "prefix": "postVars",
+        "body": "postVars",
+        "description": "Local onde são declaradas as variáveis que serão enviadas no payload da requisição POST feita para o WebView. Somente utilizada quando o evento ‘post‘ está presente."
+    },
+    "post": {
+        "prefix": "post",
+        "body": "post",
+        "description": "Evento responsável por atribuir o valor às variáveis presentes em ‘postVars‘ e que serão enviadas na requisição POST."
+    },
+    "onHttpError": {
+        "prefix": "onHttpError",
+        "body": "onHttpError",
+        "description": "Evento responsável por repassar para o aplicativo dinâmico os erros ao carregar recursos no WebView. Podem ser usadas as variáveis: originalCode (Representa o valor original enviado pelo Android, httpStatusCode (Representa uma conversão do ‘originalCode’ para um código semelhante do protocolo HTTP) e url (Representa o recurso que não pode ser carregado."
+    },
+	"FixedKeyAppSys": {
+        "prefix": "FixedKeyAppSys",
+        "body": "FixedKeyAppSys",
+        "description": "(Necessária) Nome do sistema, utilizado para exibir a versão do core na tela de informações. (Padrão: xMova)"
+    },
+    "FixedKeyAppName": {
+        "prefix": "FixedKeyAppName",
+        "body": "FixedKeyAppName",
+        "description": "(Necessária) Nome do fluxo. (Padrão: Simova Apps)"
+    },
+    "FixedKeyAppVersion": {
+        "prefix": "FixedKeyAppVersion",
+        "body": "FixedKeyAppVersion",
+        "description": "(Necessária) Utilizada para apresentar a versão do fluxo. (Padrão: Aplicativo)"
+    },
+    "FixedKeyAppUid": {
+        "prefix": "FixedKeyAppUid",
+        "body": "FixedKeyAppUid",
+        "description": "(Necessária) Usada para apresentar a identificação do dispositivo (IMEI ou Mac Address no caso do emulador)"
+    },
+    "FixedKeyMsgInvalidValueOf": {
+        "prefix": "FixedKeyMsgInvalidValueOf",
+        "body": "FixedKeyMsgInvalidValueOf",
+        "description": "(*insert - Em conjunto com o atributo de entidade) Utilizada para informar ao usuário que o valor informado é inválido para ser inserido. Pode ser usado o Texto do campo (%field) como variável na frase (Exemplo Valor de %field é inválido.) (Padrão: %field inválido!)"
+    },
+    "FixedKeyMsgInvalidValue": {
+        "prefix": "FixedKeyMsgInvalidValue",
+        "body": "FixedKeyMsgInvalidValue",
+        "description": "(***password=[values] - Em conjunto com o atributo de instrução) Usada para informar ao usuário que o valor da senha inserida é inválido. (Padrão: Valor inválido)"
+    },
+    "FixedKeyMsgInsertError": {
+        "prefix": "FixedKeyMsgInsertError",
+        "body": "FixedKeyMsgInsertError",
+        "description": "(*insert - Em conjunto com o atributo de entidade) Usada para informar que houve um erro na inserção do registro. (Padrão: Erro ao adicionar)"
+    },
+    "FixedKeyMsgUpdateWithOfflineData": {
+        "prefix": "FixedKeyMsgUpdateWithOfflineData",
+        "body": "FixedKeyMsgUpdateWithOfflineData",
+        "description": "(Necessária) Apresentada quando existe uma atualização disponível para instalar mas ainda existem dados para enviar. (Padrão: Há dados offline. Faça um sincronismo antes de fazer update)"
+    },
+    "FixedKeyMsgOnlineValidateError": {
+        "prefix": "FixedKeyMsgOnlineValidateError",
+        "body": "FixedKeyMsgOnlineValidateError",
+        "description": "(**onlineValidate - Em conjunto com o atributo de campo) Exibida quando houve um erro na validação do campo. (Padrão: Erro ao validar informação)"
+    },
+    "FixedKeyMsgOnlineValidateFail": {
+        "prefix": "FixedKeyMsgOnlineValidateFail",
+        "body": "FixedKeyMsgOnlineValidateFail",
+        "description": "(**onlineValidate - Em conjunto com o atributo de campo) Exibida quando a informação validada é inválida (Padrão: Informação não confere)"
+    },
+    "FixedKeySyncMessage": {
+        "prefix": "FixedKeySyncMessage",
+        "body": "FixedKeySyncMessage",
+        "description": "(Necessária) Exibida quando um sincronismo é iniciado em foreground. (Padrão: Aguarde! Sincronizando dados com o servidor)"
+    },
+    "FixedKeySyncTitle": {
+        "prefix": "FixedKeySyncTitle",
+        "body": "FixedKeySyncTitle",
+        "description": "(Necessária) Define o título da tela de sincronismo foreground. (Padrão: Sincronismo)"
+    },
+    "FixedKeyCommandOK": {
+        "prefix": "FixedKeyCommandOK",
+        "body": "FixedKeyCommandOK",
+        "description": "Texto para a ação OK. (Padrão: OK)"
+    },
+    "FixedKeyCommandBack": {
+        "prefix": "FixedKeyCommandBack",
+        "body": "FixedKeyCommandBack",
+        "description": "Texto para ação de voltar. (Padrão: Voltar)"
+    },
+    "FixedKeyCommandCancel": {
+        "prefix": "FixedKeyCommandCancel",
+        "body": "FixedKeyCommandCancel",
+        "description": "Texto para ação de cancelar. (Padrão: Cancelar)"
+    },
+    "FixedKeyCommandYes": {
+        "prefix": "FixedKeyCommandYes",
+        "body": "FixedKeyCommandYes",
+        "description": "Texto para a ação de confirmar quando exibida em conjunto de outras ações. (Padrão: Sim)"
+    },
+    "FixedKeyCommandNo": {
+        "prefix": "FixedKeyCommandNo",
+        "body": "FixedKeyCommandNo",
+        "description": "Texto para a ação de cancelar quando exibida em conjunto de outras ações. (Padrão: Não)"
+    },
+    "FixedKeyCommandExit": {
+        "prefix": "FixedKeyCommandExit",
+        "body": "FixedKeyCommandExit",
+        "description": "Texto da opção de sair do aplicativo. (Padrão: Sair)"
+    },
+    "FixedKeyCommandConfirm": {
+        "prefix": "FixedKeyCommandConfirm",
+        "body": "FixedKeyCommandConfirm",
+        "description": "Texto da ação de confirmação. (Padrão: Confirmar)"
+    },
+    "FixedKeyCommandAdd": {
+        "prefix": "FixedKeyCommandAdd",
+        "body": "FixedKeyCommandAdd",
+        "description": "Texto da ação de adicionar. Sempre é adicionado o Texto da entidade ao valor desta chave."
+    },
+    "FixedKeyListDeleteAllSelectedMsg": {
+        "prefix": "FixedKeyListDeleteAllSelectedMsg",
+        "body": "FixedKeyListDeleteAllSelectedMsg",
+        "description": "Apresentada quando a opção de remover registros foi executada porém nenhum registro foi selecionado"
+    },
+    "FixedKeyDeleteConfirmMessage": {
+        "prefix": "FixedKeyDeleteConfirmMessage",
+        "body": "FixedKeyDeleteConfirmMessage",
+        "description": "Apresentada para confirmar a remoção do registro da entidade. Pode ser usado o Texto da entidade (%entity) como variável na frase. (Exemplo: Confirma remover %entity)"
+    },
+    "FixedKeyListDeleteError": {
+        "prefix": "FixedKeyListDeleteError",
+        "body": "FixedKeyListDeleteError",
+        "description": "Exibida quando houve um erro ao remover algum registro. Pode ser usado o Texto da entidade (%entity) como variável na frase. (Exemplo: Erro ao remover %entity)"
+    },
+    "FixedKeyListActionDelete": {
+        "prefix": "FixedKeyListActionDelete",
+        "body": "FixedKeyListActionDelete",
+        "description": "Texto da ação de remover da lista. (Padrão: Remover)"
+    },
+    "FixedKeyListActionInsert": {
+        "prefix": "FixedKeyListActionInsert",
+        "body": "FixedKeyListActionInsert",
+        "description": "Texto da ação de inserir na lista. (Padrão: Adicionar)"
+    },
+    "FixedKeyListInsertActionOK": {
+        "prefix": "FixedKeyListInsertActionOK",
+        "body": "FixedKeyListInsertActionOK",
+        "description": "Texto da ação de confirmação da inserção de um registro na lista."
+    },
+    "FixedKeyListInsertActionCancel": {
+        "prefix": "FixedKeyListInsertActionCancel",
+        "body": "FixedKeyListInsertActionCancel",
+        "description": "Texto da ação de cancelar a inserção de um registro na lista. (Padrão: Voltar)"
+    },
+    "FixedKeyListInsertRecordAlreadyExists": {
+        "prefix": "FixedKeyListInsertRecordAlreadyExists",
+        "body": "FixedKeyListInsertRecordAlreadyExists",
+        "description": "Mensagem apresentada quando da inserção de um registro com dados iguais a de um registro já existente. Pode ser usado o Texto da entidade (%entity) como variável. (Exemplo: %entity já existente (%desc)!)"
+    },
+    "FixedKeyCrudOptionSync": {
+        "prefix": "FixedKeyCrudOptionSync",
+        "body": "FixedKeyCrudOptionSync",
+        "description": "Texto da ação usada para atualizar os dados do aplicativo quando na tela de ações do Crud. (Padrão: Atualizar Dados)"
+    },
+    "FixedKeyCrudOptionFinish": {
+        "prefix": "FixedKeyCrudOptionFinish",
+        "body": "FixedKeyCrudOptionFinish",
+        "description": "Texto da ação usada para finalizar o preenchimento dos dados de um registro. (Padrão: Finalizar Turno)"
+    },
+    "FixedKeyFillConfirm": {
+        "prefix": "FixedKeyFillConfirm",
+        "body": "FixedKeyFillConfirm",
+        "description": "Mensagem de confirmação do preenchimento de um campo. Pode ser usado o field (%field) como variável. (Exemplo: Deseja informar %field?)"
+    },
+    "FixedKeyCrudCreateConfirmMessage": {
+        "prefix": "FixedKeyCrudCreateConfirmMessage",
+        "body": "FixedKeyCrudCreateConfirmMessage",
+        "description": "Mensagem de confirmação da criação de um registro. Pode ser usado o Texto da entidade (%entity) como variável. (Exemplo: Iniciar %entity?) (Padrão: Confirma iniciar o boletim?)"
+    },
+    "FixedKeyCrudFinishConfirmMessage": {
+        "prefix": "FixedKeyCrudFinishConfirmMessage",
+        "body": "FixedKeyCrudFinishConfirmMessage",
+        "description": "Mensagem de confirmação da finalização do preenchimento de um registro. Pode ser usado o Texto da entidade (%entity) como variável. (Exemplo: Finalizar %entity?) (Padrão: Confirma fechar o boletim?)"
+    },
+    "FixedKeyMsgEmptyList": {
+        "prefix": "FixedKeyMsgEmptyList",
+        "body": "FixedKeyMsgEmptyList",
+        "description": "Mensagem exibida quando os dados de uma lista são filtrados e nenhum registro é encontrado"
+    },
+    "FixedKeyMsgRecordSelector": {
+        "prefix": "FixedKeyMsgRecordSelector",
+        "body": "FixedKeyMsgRecordSelector",
+        "description": "Mensagem exibida após a execução do filtro dos dados de uma lista e pelo menos um registro foi encontrado"
+    },
+    "FixedKeyMsgSavedData": {
+        "prefix": "FixedKeyMsgSavedData",
+        "body": "FixedKeyMsgSavedData",
+        "description": "Mensagem exibida quando um registro é salvo. (Padrão: Dados Gravados!)"
+    },
+    "FixedKeyMsgVerifyEmptyEntity": {
+        "prefix": "FixedKeyMsgVerifyEmptyEntity",
+        "body": "FixedKeyMsgVerifyEmptyEntity",
+        "description": "Mensagem exibida quando um ou mais registros obrigatórios para a continuação do fluxo não foram encontrados. Os Textos das entidades (%entities) obrigatórias não encontradas pode ser usado como variável. (Padrão: Dados obrigatórios de %entities não foram encontrados. Tente fazer um sincronismo!)"
+    },
+    "FixedKeyMsgAnd": {
+        "prefix": "FixedKeyMsgAnd",
+        "body": "FixedKeyMsgAnd",
+        "description": "Conjunção aditiva ‘e’. (Padrão: e)"
+    },
+    "FixedKeyMsgGoodMorning": {
+        "prefix": "FixedKeyMsgGoodMorning",
+        "body": "FixedKeyMsgGoodMorning",
+        "description": "Mensagem de bom dia"
+    },
+    "FixedKeyMsgGoodAfternoon": {
+        "prefix": "FixedKeyMsgGoodAfternoon",
+        "body": "FixedKeyMsgGoodAfternoon",
+        "description": "Mensagem de boa tarde"
+    },
+    "FixedKeyMsgGoodEvening": {
+        "prefix": "FixedKeyMsgGoodEvening",
+        "body": "FixedKeyMsgGoodEvening",
+        "description": "Mensagem de boa noite"
+    },
+    "FixedKeyBluetoothSenderCancelTexto": {
+        "prefix": "FixedKeyBluetoothSenderCancelTexto",
+        "body": "FixedKeyBluetoothSenderCancelTexto",
+        "description": "Texto da ação usada para cancelar um envio de dados via bluetooth. (Padrão: Cancelar)"
+    },
+    "FixedKeyCrudViewControllerToastInputValue": {
+        "prefix": "FixedKeyCrudViewControllerToastInputValue",
+        "body": "FixedKeyCrudViewControllerToastInputValue",
+        "description": "Mensagem exibida quando um dado necessário não é informado. (Padrão: Informe um Valor)"
+    },
+    "FixedKeyPredefinedCodeExecutorLoadingMessage": {
+        "prefix": "FixedKeyPredefinedCodeExecutorLoadingMessage",
+        "body": "FixedKeyPredefinedCodeExecutorLoadingMessage",
+        "description": "Mensagem exibida enquanto as mensagens estão sendo carregadas. (Padrão: Carregando mensagens...)"
+    },
+    "FixedKeyXExceptionDaoException": {
+        "prefix": "FixedKeyXExceptionDaoException",
+        "body": "FixedKeyXExceptionDaoException",
+        "description": "Mensagem usada para apresentar um erro no banco de dados. Sempre é adicionado o tipo do erro ao final da mensagem. (Padrão: Erro de banco de dados)"
+    },
+    "FixedKeyXExceptionNoNetworkException": {
+        "prefix": "FixedKeyXExceptionNoNetworkException",
+        "body": "FixedKeyXExceptionNoNetworkException",
+        "description": "Mensagem exibida quando ocorre uma falha na comunicação com a web. Sempre é adicionado o tipo do erro ao final da mensagem. (Padrão: Problema na comunicação. Você está numa área com sinal?)"
+    },
+    "FixedKeyXExceptionSyncStatusFail": {
+        "prefix": "FixedKeyXExceptionSyncStatusFail",
+        "body": "FixedKeyXExceptionSyncStatusFail",
+        "description": "Mensagem exibida quando a web retorna um código http válido mas um status inválido. (Status diferente de 0). (Padrão: WebService retornou um status inválido.)"
+    },
+    "FixedKeyXExceptionCrudSaveException": {
+        "prefix": "FixedKeyXExceptionCrudSaveException",
+        "body": "FixedKeyXExceptionCrudSaveException",
+        "description": "Mensagem exibida quando ocorre algum erro ao salvar o registro. Sempre é adicionado o tipo do erro ao final da mensagem. (Padrão: Erro ao salvar registro)"
+    },
+    "FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate": {
+        "prefix": "FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate",
+        "body": "FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate",
+        "description": "Mensagem exibida quando a data informada manualmente é vinte dias maior do que a última data obtida do servidor. Usada em conjunto com a chave ‘FixedKeyUserDateTimeViewControllerInvalidDateHour’. (Padrão: Data inválida, sincronize com servidor.)"
+    },
+    "FixedKeyXExceptionInputSysDateSmallerThanLastServerDate": {
+        "prefix": "FixedKeyXExceptionInputSysDateSmallerThanLastServerDate",
+        "body": "FixedKeyXExceptionInputSysDateSmallerThanLastServerDate",
+        "description": "Mensagem exibida quando a data informada manualmente é menor do que a última data obtida do servidor. Usada em conjunto com a chave ‘FixedKeyUserDateTimeViewControllerInvalidDateHour’. (Padrão: Data e hora inválidos, menor que do servidor)"
+    },
+    "FixedKeyXExceptionInvalidInputSysDate": {
+        "prefix": "FixedKeyXExceptionInvalidInputSysDate",
+        "body": "FixedKeyXExceptionInvalidInputSysDate",
+        "description": "Mensagem exibida quando uma data inválida é informada. (Padrão: Data inválida!)"
+    },
+    "FixedKeyServiceHttpConnectionWaitValidatingInformation": {
+        "prefix": "FixedKeyServiceHttpConnectionWaitValidatingInformation",
+        "body": "FixedKeyServiceHttpConnectionWaitValidatingInformation",
+        "description": "Mensagem exibida enquanto uma informação está sendo validada. (Padrão: Aguarde! Validando informação...)"
+    },
+    "FixedKeyServiceHttpConnectionProcessingData": {
+        "prefix": "FixedKeyServiceHttpConnectionProcessingData",
+        "body": "FixedKeyServiceHttpConnectionProcessingData",
+        "description": "Mensagem exibida enquanto os dados estão sendo processados. (Padrão: Processando dados...)"
+    },
+    "FixedKeyMessageSourceScreenMessageConfirm": {
+        "prefix": "FixedKeyMessageSourceScreenMessageConfirm",
+        "body": "FixedKeyMessageSourceScreenMessageConfirm",
+        "description": "Título da tela de mensagem. (Padrão: Mensagem)"
+    },
+    "FixedKeyMessageSourceScreenMessageConfirmOK": {
+        "prefix": "FixedKeyMessageSourceScreenMessageConfirmOK",
+        "body": "FixedKeyMessageSourceScreenMessageConfirmOK",
+        "description": "Texto da ação de confirmação exibida na tela de mensagens. (Padrão: OK)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerUpdateDeviceList": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerUpdateDeviceList",
+        "body": "FixedKeyBluetoothReceiverViewControllerUpdateDeviceList",
+        "description": "Título da ação utilizada para atualizar a lista de dispositivos disponíveis para fazer pareamento via Bluetooth. (Padrão: Atualizar)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerReceiveData": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerReceiveData",
+        "body": "FixedKeyBluetoothReceiverViewControllerReceiveData",
+        "description": "Título da tela de recebimento de dados enviados via Bluetooth. (Padrão: Receber Dados)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerStop": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerStop",
+        "body": "FixedKeyBluetoothReceiverViewControllerStop",
+        "description": "Texto da ação usada para parar o recebimento via Bluetooth. (Padrão: Parar)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerDataReceivedFrom": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerDataReceivedFrom",
+        "body": "FixedKeyBluetoothReceiverViewControllerDataReceivedFrom",
+        "description": "Mensagem exibida quando o recebimento de dados via Bluetooth é iniciado. Sempre é adicionado o nome do dispositivo que está enviando os dados. (Padrão: Dados recebidos de)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerReadingData": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerReadingData",
+        "body": "FixedKeyBluetoothReceiverViewControllerReadingData",
+        "description": "Mensagem exibida enquanto os dados recebidos via Bluetooth são lidos. (Padrão: Lendo dados...)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerRegistersReceived": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerRegistersReceived",
+        "body": "FixedKeyBluetoothReceiverViewControllerRegistersReceived",
+        "description": "Mensagem exibida quando o recebimento de dados via Bluetooth é finalizado. É adicionado ao início da frase a quantidade de registros que foram recebidos. (Padrão: registros recebidos!)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerReceiving": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerReceiving",
+        "body": "FixedKeyBluetoothReceiverViewControllerReceiving",
+        "description": "Mensagem exibida no início do recebimento dos arquivos via Bluetooth. Sempre é adicionada a quantidade de arquivos e o valor da chave FixedKeyBluetoothReceiverViewControllerFiles no final da frase. (Padrão: Recebendo)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerFiles": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerFiles",
+        "body": "FixedKeyBluetoothReceiverViewControllerFiles",
+        "description": "Mensagem exibida no início do recebimento dos arquivos via Bluetooth. Sempre é adicionada a quantidade de arquivos e o valor da chave FixedKeyBluetoothReceiverViewControllerReceiving no início da frase. (Padrão: arquivos)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerFilesReceived": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerFilesReceived",
+        "body": "FixedKeyBluetoothReceiverViewControllerFilesReceived",
+        "description": "Mensagem exibida ao final do recebimento de arquivos via Bluetooth. Sempre é adicionada a quantidade de arquivos no início da frase. (Padrão: arquivos recebidos)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerNoFilesToReceive": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerNoFilesToReceive",
+        "body": "FixedKeyBluetoothReceiverViewControllerNoFilesToReceive",
+        "description": "Mensagem exibida quando não existe nenhum arquivo para receber via Bluetooth. (Padrão: Nenhum arquivo a receber)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerFailReceivingFiles": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerFailReceivingFiles",
+        "body": "FixedKeyBluetoothReceiverViewControllerFailReceivingFiles",
+        "description": "Mensagem exibida quando ocorreu uma falha ao receber os arquivos via Bluetooth. (Padrão: Falha ao receber arquivos)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerSearchingDevices": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerSearchingDevices",
+        "body": "FixedKeyBluetoothReceiverViewControllerSearchingDevices",
+        "description": "Mensagem exibida enquanto os dispositivos estão sendo procurados para a transferência via Bluetooth. (Padrão: Procurando dispositivos...)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerFailOnReceive": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerFailOnReceive",
+        "body": "FixedKeyBluetoothReceiverViewControllerFailOnReceive",
+        "description": "Mensagem exibida quando uma falha ocorreu ao receber dados via Bluetooth. (Padrão: Falha no recebimento)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerWaitProcessing": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerWaitProcessing",
+        "body": "FixedKeyBluetoothReceiverViewControllerWaitProcessing",
+        "description": "Mensagem exibida quando o usuário tenta executar a ação para sair da tela e os dados ainda estão sendo processados. (Padrão: Aguarde processamento!)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerNotAbleToTurnOnBluetooth": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerNotAbleToTurnOnBluetooth",
+        "body": "FixedKeyBluetoothReceiverViewControllerNotAbleToTurnOnBluetooth",
+        "description": "Mensagem exibida quando não é possível ativar o Bluetooth para receber os dados. (Padrão: Não foi possível ligar o Bluetooth)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPasswordRestoreBackup": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPasswordRestoreBackup",
+        "body": "FixedKeyBluetoothSenderViewControllerPasswordRestoreBackup",
+        "description": "Texto exibida na tela da senha para permitir o envio dos dados de back-up do Bluetooth. (Padrão: Senha para restaurar backup:)"
+    },
+    "FixedKeyBluetoothSenderViewControllerNotAbleToTurnOnBluetooth": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerNotAbleToTurnOnBluetooth",
+        "body": "FixedKeyBluetoothSenderViewControllerNotAbleToTurnOnBluetooth",
+        "description": "Mensagem exibida quando não é possível ativar o Bluetooth para enviar os dados (Padrão: Não foi possível ligar o Bluetooth)"
+    },
+    "FixedKeyBluetoothSenderViewControllerWaitProcessing": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerWaitProcessing",
+        "body": "FixedKeyBluetoothSenderViewControllerWaitProcessing",
+        "description": "Mensagem exibida quando o usuário tenta executar a ação para sair da tela e os dados ainda estão sendo processados. (Padrão: Aguarde processamento!)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPasswordResendData": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPasswordResendData",
+        "body": "FixedKeyBluetoothSenderViewControllerPasswordResendData",
+        "description": "Título da tela de senha para o envio dos dados de back-up do Bluetooth. (Padrão: Reenvio de dados)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPasswordOK": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPasswordOK",
+        "body": "FixedKeyBluetoothSenderViewControllerPasswordOK",
+        "description": "Texto da ação de confirmação exibida na tela de senha para o envio dos dados de back-up do Bluetooth. (Padrão: OK)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPasswordCancel": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPasswordCancel",
+        "body": "FixedKeyBluetoothSenderViewControllerPasswordCancel",
+        "description": "Texto da ação de cancelar exibida na tela de senha para o envio dos dados de back-up do Bluetooth. (Padrão: Cancelar)"
+    },
+    "FixedKeyBluetoothSenderViewControllerSendData": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerSendData",
+        "body": "FixedKeyBluetoothSenderViewControllerSendData",
+        "description": "Título da tela exibida enquanto o aplicativo aguarda conexão para enviar os dados. (Padrão: Envio de Dados)"
+    },
+    "FixedKeyBluetoothSenderViewControllerSearchDeviceReceiver": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerSearchDeviceReceiver",
+        "body": "FixedKeyBluetoothSenderViewControllerSearchDeviceReceiver",
+        "description": "Mensagem exibida na tela enquanto o aplicativo aguarda a conexão para enviar os dados. (Padrão: Procurando pelo aparelho que receberá os dados...)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPasswordDoesntMatch": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPasswordDoesntMatch",
+        "body": "FixedKeyBluetoothSenderViewControllerPasswordDoesntMatch",
+        "description": "Mensagem exibida quando a senha informada para o envio do back-up dos dados do Bluetooth não tem o valor esperado. (Padrão: Senha não confere)"
+    },
+    "FixedKeyBluetoothSenderViewControllerPreparingDataToSendTo": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerPreparingDataToSendTo",
+        "body": "FixedKeyBluetoothSenderViewControllerPreparingDataToSendTo",
+        "description": "Mensagem exibida enquanto os dados estão sendo preparados para serem enviados via Bluetooth. Sempre é adicionado o nome do dispositivo que irá receber os dados. (Padrão: Preparando dados para enviar para)"
+    },
+    "FixedKeyBluetoothSenderViewControllerSendingDataTo": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerSendingDataTo",
+        "body": "FixedKeyBluetoothSenderViewControllerSendingDataTo",
+        "description": "Mensagem exibida enquanto os dados estão sendo enviados via Bluetooth. Sempre é adicionado o nome do dispositivo que está recebendo os dados. (Padrão: Enviando Dados para )"
+    },
+    "FixedKeyBluetoothSenderViewControllerWaitReceivingData": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerWaitReceivingData",
+        "body": "FixedKeyBluetoothSenderViewControllerWaitReceivingData",
+        "description": "Mensagem exibida enquanto os dados estão sendo recebidos via Bluetooth. (Padrão: Aguarde recebimento de dados...)"
+    },
+    "FixedKeyBluetoothSenderViewControllerDataSuccessfullySentTo": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerDataSuccessfullySentTo",
+        "body": "FixedKeyBluetoothSenderViewControllerDataSuccessfullySentTo",
+        "description": "Mensagem exibida quando todos os dados foram enviados. Sempre é adicionado o nome do dispositivo que recebeu os dados ao final da frase. (Padrão: Dados enviados com sucesso para )"
+    },
+    "FixedKeyBluetoothSenderViewControllerErrorSendingDataWaitNewTry": {
+        "prefix": "FixedKeyBluetoothSenderViewControllerErrorSendingDataWaitNewTry",
+        "body": "FixedKeyBluetoothSenderViewControllerErrorSendingDataWaitNewTry",
+        "description": "Mensagem exibida quando um erro ocorreu ao enviar os dados. (Padrão: Ocorreu um erro ao enviar os dados! Aguardando nova tentativa...)"
+    },
+    "FixedKeyCustomViewControllerBack": {
+        "prefix": "FixedKeyCustomViewControllerBack",
+        "body": "FixedKeyCustomViewControllerBack",
+        "description": "Texto da ação de voltar exibida na tela customizada. (Padrão: Voltar)"
+    },
+    "FixedKeyMainViewControllerNewVersionAvaiable": {
+        "prefix": "FixedKeyMainViewControllerNewVersionAvaiable",
+        "body": "FixedKeyMainViewControllerNewVersionAvaiable",
+        "description": "Mensagem exibida quando existe uma versão nova para ser instalada mas ainda existem dados para serem enviados para a web. (Padrão: Nova versão disponível. É muito importante atualizar o aplicativo assim que possível. Como existem dados off-line não enviados o aplicativo não será atualizado agora. Envie os dados para atualizar o aplicativo)"
+    },
+    "FixedKeyMainViewControllerNewVersion": {
+        "prefix": "FixedKeyMainViewControllerNewVersion",
+        "body": "FixedKeyMainViewControllerNewVersion",
+        "description": "Título da tela que informa que existe uma nova versão disponível mas que existem dados para serem transmitidos. (Padrão: Nova versão)"
+    },
+    "FixedKeyOptionSelectorViewControllerCancel": {
+        "prefix": "FixedKeyOptionSelectorViewControllerCancel",
+        "body": "FixedKeyOptionSelectorViewControllerCancel",
+        "description": "Texto da ação de cancelar exibida na tela de opções do Crud. (Padrão: Cancelar)"
+    },
+    "FixedKeyOptionSelectorViewControllerExit": {
+        "prefix": "FixedKeyOptionSelectorViewControllerExit",
+        "body": "FixedKeyOptionSelectorViewControllerExit",
+        "description": "Texto da ação de sair exibida na tela de opções do Crud. (Padrão: Sair)"
+    },
+    "FixedKeyOptionSelectorViewControllerOK": {
+        "prefix": "FixedKeyOptionSelectorViewControllerOK",
+        "body": "FixedKeyOptionSelectorViewControllerOK",
+        "description": "Texto da ação de confirmar exibida na tela de opções do Crud. (Padrão: OK)"
+    },
+    "FixedKeyRecordDetailViewControllerBack": {
+        "prefix": "FixedKeyRecordDetailViewControllerBack",
+        "body": "FixedKeyRecordDetailViewControllerBack",
+        "description": "Texto da ação de voltar exibida na tela que exibe os detalhes de um registro. (Padrão: Voltar)"
+    },
+    "FixedKeyRecordSelectorViewControllerSelectItemToRemove": {
+        "prefix": "FixedKeyRecordSelectorViewControllerSelectItemToRemove",
+        "body": "FixedKeyRecordSelectorViewControllerSelectItemToRemove",
+        "description": "Mensagem exibida quando a opção de remover registros de uma lista é executada mas nenhum registro foi selecionado para ser removido. (Padrão: Selecione itens para remover)"
+    },
+    "FixedKeyRecordSelectorViewControllerWait": {
+        "prefix": "FixedKeyRecordSelectorViewControllerWait",
+        "body": "FixedKeyRecordSelectorViewControllerWait",
+        "description": "Mensagem exibida quando o usuário tenta executar uma ação porém o filtro ainda está sendo executado e não é possível executar a ação. (Padrão: Aguarde...)"
+    },
+    "FixedKeyRecordsSelectorViewControllerSelectAll": {
+        "prefix": "FixedKeyRecordsSelectorViewControllerSelectAll",
+        "body": "FixedKeyRecordsSelectorViewControllerSelectAll",
+        "description": "Texto da ação usada para selecionar todos os registros em uma lista. (Padrão: Marcar todos)"
+    },
+    "FixedKeyRecordsSelectorViewControllerUnselectAll": {
+        "prefix": "FixedKeyRecordsSelectorViewControllerUnselectAll",
+        "body": "FixedKeyRecordsSelectorViewControllerUnselectAll",
+        "description": "Texto da ação usada para desmarcar todos os registros selecionados em uma lista. (Padrão: Desmarcar todos)"
+    },
+    "FixedKeyRecordsSelectorViewControllerSelectAnyItem": {
+        "prefix": "FixedKeyRecordsSelectorViewControllerSelectAnyItem",
+        "body": "FixedKeyRecordsSelectorViewControllerSelectAnyItem",
+        "description": "Mensagem exibida quando a opção de confirmação é executada mas nenhum registro foi selecionado. (Padrão: Selecione algum item)"
+    },
+    "FixedKeyTakePictureViewControllerSaving": {
+        "prefix": "FixedKeyTakePictureViewControllerSaving",
+        "body": "FixedKeyTakePictureViewControllerSaving",
+        "description": "Mensagem exibida enquanto uma foto está sendo salva. (Padrão: Gravando...)"
+    },
+    "FixedKeyTakePictureViewControllerPreparingCamera": {
+        "prefix": "FixedKeyTakePictureViewControllerPreparingCamera",
+        "body": "FixedKeyTakePictureViewControllerPreparingCamera",
+        "description": "Mensagem exibida enquanto a camera está sendo inicializada pelo aplicativo. (Padrão: Preparando camera...)"
+    },
+    "FixedKeyTakePictureViewControllerCameraUnavaiable": {
+        "prefix": "FixedKeyTakePictureViewControllerCameraUnavaiable",
+        "body": "FixedKeyTakePictureViewControllerCameraUnavaiable",
+        "description": "Mensagem exibida quando não foi possível inicializar a camera. (Padrão: Camera indisponível)"
+    },
+    "FixedKeyUpdateViewControllerMsgDefaultError": {
+        "prefix": "FixedKeyUpdateViewControllerMsgDefaultError",
+        "body": "FixedKeyUpdateViewControllerMsgDefaultError",
+        "description": "Mensagem exibida quando ocorreu algum erro ao fazer o download do fluxo. (Padrão: Não foi possível baixar aplicativo. Verifique conexão)"
+    },
+    "FixedKeyUpdateViewControllerMsgUpdateWithSuccess": {
+        "prefix": "FixedKeyUpdateViewControllerMsgUpdateWithSuccess",
+        "body": "FixedKeyUpdateViewControllerMsgUpdateWithSuccess",
+        "description": "Mensagem exibida quando o processo de atualização do aplicativo terminou. (Padrão: Aplicativo atualizado com sucesso. Pressione OK para continuar)"
+    },
+    "FixedKeyUpdateViewControllerNewVersion": {
+        "prefix": "FixedKeyUpdateViewControllerNewVersion",
+        "body": "FixedKeyUpdateViewControllerNewVersion",
+        "description": "Título da tela de atualização do aplicativo. (Padrão: Nova Versão)"
+    },
+    "FixedKeyUpdateViewControllerCannotUpdateCorruptedFile": {
+        "prefix": "FixedKeyUpdateViewControllerCannotUpdateCorruptedFile",
+        "body": "FixedKeyUpdateViewControllerCannotUpdateCorruptedFile",
+        "description": "Mensagem exibida quando o novo fluxo a ser instalado está corrompido. (Padrão: Não foi possível atualizar o aplicativo. Arquivo corrompido)"
+    },
+    "FixedKeyUserDateTimeViewControllerFixDateHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerFixDateHour",
+        "body": "FixedKeyUserDateTimeViewControllerFixDateHour",
+        "description": "Título da tela de inserção de data manual. (Padrão: Acerte Data e Hora)"
+    },
+    "FixedKeyUserDateTimeViewControllerInvalidValue": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInvalidValue",
+        "body": "FixedKeyUserDateTimeViewControllerInvalidValue",
+        "description": "Mensagem exibida quando o valor inserido para o campo atual da data ou hora é inválido. (Padrão: Valor inválido!)"
+    },
+    "FixedKeyUserDateTimeViewControllerOK": {
+        "prefix": "FixedKeyUserDateTimeViewControllerOK",
+        "body": "FixedKeyUserDateTimeViewControllerOK",
+        "description": "Texto da ação de confirmação de data e/ou hora inseridos. (Padrão: OK)"
+    },
+    "FixedKeyUserDateTimeViewControllerBack": {
+        "prefix": "FixedKeyUserDateTimeViewControllerBack",
+        "body": "FixedKeyUserDateTimeViewControllerBack",
+        "description": "Texto da ação de voltar presente na tela de inserção de data e hora manual. Padrão: Voltar)"
+    },
+    "FixedKeyUserDateTimeViewControllerAgain": {
+        "prefix": "FixedKeyUserDateTimeViewControllerAgain",
+        "body": "FixedKeyUserDateTimeViewControllerAgain",
+        "description": "Texto da ação que reinicia o processo de inserção de data e hora manual. (Padrão: Novamente)"
+    },
+    "FixedKeyUserDateTimeViewControllerExit": {
+        "prefix": "FixedKeyUserDateTimeViewControllerExit",
+        "body": "FixedKeyUserDateTimeViewControllerExit",
+        "description": "Texto da ação de sair apresentada na tela de inserção do dia. (Padrão: Sair)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertYear": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertYear",
+        "body": "FixedKeyUserDateTimeViewControllerInsertYear",
+        "description": "Mensagem exibida na tela que solicita o ano ao usuário. (Padrão: Digite o ANO:)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertMonth": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertMonth",
+        "body": "FixedKeyUserDateTimeViewControllerInsertMonth",
+        "description": "Mensagem exibida na tela que solicita o mês ao usuário. (Padrão: Digite o MÊS:)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertDay": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertDay",
+        "body": "FixedKeyUserDateTimeViewControllerInsertDay",
+        "description": "Mensagem exibida na tela que solicita o dia ao usuário. (Padrão: Digite o DIA:)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertHour",
+        "body": "FixedKeyUserDateTimeViewControllerInsertHour",
+        "description": "Mensagem exibida na tela que solicita as horas ao usuário. (Padrão: Digite as HORAS:)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertMinute": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertMinute",
+        "body": "FixedKeyUserDateTimeViewControllerInsertMinute",
+        "description": "Mensagem exibida na tela que solicita os minutos ao usuário. (Padrão: Digite os MINUTOS:)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertTodayDate": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertTodayDate",
+        "body": "FixedKeyUserDateTimeViewControllerInsertTodayDate",
+        "description": "Mensagem exibida quando a data atual é solicitada (Padrão: Informe a data de hoje)"
+    },
+    "FixedKeyUserDateTimeViewControllerInsertCurrentDate": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInsertCurrentDate",
+        "body": "FixedKeyUserDateTimeViewControllerInsertCurrentDate",
+        "description": "Mensagem exibida quando a hora atual é solicitada (Padrão: Informe a hora atual)"
+    },
+    "FixedKeyUserDateTimeViewControllerDate": {
+        "prefix": "FixedKeyUserDateTimeViewControllerDate",
+        "body": "FixedKeyUserDateTimeViewControllerDate",
+        "description": "Texto exibido na tela de confirmação da data informada. (Padrão: Data)"
+    },
+    "FixedKeyUserDateTimeViewControllerHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerHour",
+        "body": "FixedKeyUserDateTimeViewControllerHour",
+        "description": "Texto exibido na tela de confirmação da hora informada. (Padrão: Hora)"
+    },
+    "FixedKeyUserDateTimeViewControllerConfirmDateHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerConfirmDateHour",
+        "body": "FixedKeyUserDateTimeViewControllerConfirmDateHour",
+        "description": "Mensagem exibida na tela de confirmação de data e hora informada. (Padrão: Confirma data e hora?)"
+    },
+    "FixedKeyUserDateTimeViewControllerInvalidDateHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerInvalidDateHour",
+        "body": "FixedKeyUserDateTimeViewControllerInvalidDateHour",
+        "description": "Mensagem exibida na tela que informa ao usuário que a data não é válida. Usada em conjunto com as chaves ‘FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate’ e ‘FixedKeyXExceptionInputSysDateSmallerThanLastServerDate’. (Padrão: Data e hora inválidos!)"
+    },
+    "FixedKeyHttpWaitConnectingWithServer": {
+        "prefix": "FixedKeyHttpWaitConnectingWithServer",
+        "body": "FixedKeyHttpWaitConnectingWithServer",
+        "description": "Mensagem exibida quando o aplicativo está se comunicando com o servidor. (Padrão: Aguarde! Comunicando-se com o servidor...)"
+    },
+    "FixedKeyHttpConnecting": {
+        "prefix": "FixedKeyHttpConnecting",
+        "body": "FixedKeyHttpConnecting",
+        "description": "Mensagem exibida quando o aplicativo está estabelecendo uma comunicação com o servidor (Padrão: Conectando...)"
+    },
+    "FixedKeyHttpWritingData": {
+        "prefix": "FixedKeyHttpWritingData",
+        "body": "FixedKeyHttpWritingData",
+        "description": "Mensagem exibida enquanto os dados estão sendo transferidos para o servidor. (Padrão: Escrevendo dados...)"
+    },
+    "FixedKeyHttpReadingData": {
+        "prefix": "FixedKeyHttpReadingData",
+        "body": "FixedKeyHttpReadingData",
+        "description": "Mensagem exibida enquanto os dados recebidos do servidor estão sendo lidos. (Padrão: Lendo dados...)"
+    },
+    "FixedKeyHttpProcessingData": {
+        "prefix": "FixedKeyHttpProcessingData",
+        "body": "FixedKeyHttpProcessingData",
+        "description": "Mensagem exibida enquanto os dados recebidos do servidor estão sendo processados. (Padrão: Processando dados...)"
+    },
+    "FixedKeyAppSupport": {
+        "prefix": "FixedKeyAppSupport",
+        "body": "FixedKeyAppSupport",
+        "description": "Título da mensagem de erro que aparece quando não é possível enviar o banco de dados ou o log para o servidor. (Padrão: Suporte)"
+    },
+    "FixedKeyAppErrorSendingSupportData": {
+        "prefix": "FixedKeyAppErrorSendingSupportData",
+        "body": "FixedKeyAppErrorSendingSupportData",
+        "description": "Mensagem de erro que aparece quando não é possível enviar o banco de dados para o servidor. (Padrão: Erro ao enviar dados de suporte)"
+    },
+    "FixedKeyAppErrorSendingLog": {
+        "prefix": "FixedKeyAppErrorSendingLog",
+        "body": "FixedKeyAppErrorSendingLog",
+        "description": "Mensagem de erro que aparece quando não é possível enviar o log para o servidor. (Padrão: Erro ao enviar logs)"
+    },
+    "FixedKeyAppErrorSendingBuffer": {
+        "prefix": "FixedKeyAppErrorSendingBuffer",
+        "body": "FixedKeyAppErrorSendingBuffer",
+        "description": "Mensagem de erro que aparece quando não é possível enviar o buffer para o servidor. (Padrão: Erro ao enviar histórico de apontamentos.)"
+    },
+    "FixedKeyAppSupportDataSent": {
+        "prefix": "FixedKeyAppSupportDataSent",
+        "body": "FixedKeyAppSupportDataSent",
+        "description": "Mensagem exibida quando o banco de dados e os logs foram enviados para o servidor. (Padrão: Dados de suporte enviados!)"
+    },
+    "FixedKeyAppSetDateTime": {
+        "prefix": "FixedKeyAppSetDateTime",
+        "body": "FixedKeyAppSetDateTime",
+        "description": "Título da tela que solicita ao usuário que informe a data e hora manual. (Padrão: Acerte a data e hora!)"
+    },
+    "FixedKeyAppSynchronism": {
+        "prefix": "FixedKeyAppSynchronism",
+        "body": "FixedKeyAppSynchronism",
+        "description": "Título da tela de sincronismo foreground. (Padrão: Sincronismo)"
+    },
+    "FixedKeyAppCantExecuteFirstSynchronism": {
+        "prefix": "FixedKeyAppCantExecuteFirstSynchronism",
+        "body": "FixedKeyAppCantExecuteFirstSynchronism",
+        "description": "Mensagem exibida quando não foi possível executar o primeiro sincronismo que é obrigatório. (Padrão: Não foi possível executar o primeiro sincronismo. Você está numa área com sinal?)"
+    },
+    "FixedKeyAppExit": {
+        "prefix": "FixedKeyAppExit",
+        "body": "FixedKeyAppExit",
+        "description": "Texto da ação usada para fechar o aplicativo. (Padrão: Sair)"
+    },
+    "FixedKeyAppReceiveDataByBluetooth": {
+        "prefix": "FixedKeyAppReceiveDataByBluetooth",
+        "body": "FixedKeyAppReceiveDataByBluetooth",
+        "description": "Texto da ação que inicia o recebimento de dados via Bluetooth. (Padrão: Receber Dados por Bluetooth)"
+    },
+    "FixedKeyAppReceiveFilebyBluetooth": {
+        "prefix": "FixedKeyAppReceiveFilebyBluetooth",
+        "body": "FixedKeyAppReceiveFilebyBluetooth",
+        "description": "Texto da ação que inicia o recebimento de arquivos via Bluetooth. (Padrão: Receber Arquivos por Bluetooth)"
+    },
+    "FixedKeyAppSendDataByBluetooth": {
+        "prefix": "FixedKeyAppSendDataByBluetooth",
+        "body": "FixedKeyAppSendDataByBluetooth",
+        "description": "Texto da ação que inicia o envio de dados via Bluetooth. (Padrão: Enviar Dados por Bluetooth)"
+    },
+    "FixedKeyAppResendDataByBluetooth": {
+        "prefix": "FixedKeyAppResendDataByBluetooth",
+        "body": "FixedKeyAppResendDataByBluetooth",
+        "description": "Texto da ação que envia o back-up dos dados enviados via Bluetooth. (Padrão: Reenviar Backup por Bluetooth)"
+    },
+    "FixedKeyAppSendLogToSupport": {
+        "prefix": "FixedKeyAppSendLogToSupport",
+        "body": "FixedKeyAppSendLogToSupport",
+        "description": "Texto da ação que envia o banco de dados e os logs para o servidor. (Padrão: Enviar log ao suporte)"
+    },
+    "FixedKeyAppTestNetwork": {
+        "prefix": "FixedKeyAppTestNetwork",
+        "body": "FixedKeyAppTestNetwork",
+        "description": "Texto da ação que verifica se o dispositivo está conectado à internet. (Padrão: Testar rede de dados)"
+    },
+    "FixedKeyInputKeyboardDone": {
+        "prefix": "FixedKeyInputKeyboardDone",
+        "body": "FixedKeyInputKeyboardDone",
+        "description": "Texto da ação de confirmação presente no teclado numérico. (Padrão: Pronto)"
+    },
+    "FixedKeyInputKeyboardBackspace": {
+        "prefix": "FixedKeyInputKeyboardBackspace",
+        "body": "FixedKeyInputKeyboardBackspace",
+        "description": "Texto da ação usada para apagar presente no teclado numérico. (Padrão: Apagar)"
+    },
+    "FixedKeyInstallAppDoneWithSuccess": {
+        "prefix": "FixedKeyInstallAppDoneWithSuccess",
+        "body": "FixedKeyInstallAppDoneWithSuccess",
+        "description": "Mensagem exibida após a instalação do aplicativo. (Padrão: Aplicativo instalado com sucesso. Pressione OK para continuar)"
+    },
+    "FixedKeyAppAirPlain": {
+        "prefix": "FixedKeyAppAirPlain",
+        "body": "FixedKeyAppAirPlain",
+        "description": "Mensagem exibida quando o modo avião está habilitado. (Padrão: Desative o modo avião!)"
+    },
+    "FixedKeyWordOr": {
+        "prefix": "FixedKeyWordOr",
+        "body": "FixedKeyWordOr",
+        "description": "Conjunção alternativa ‘ou’ (Padrão: ou)"
+    },
+    "FixedKeyTypeSearch": {
+        "prefix": "FixedKeyTypeSearch",
+        "body": "FixedKeyTypeSearch",
+        "description": "Texto exibido no campo de busca. (Padrão: Digite)"
+    },
+    "FixedKeyHttpSendingData": {
+        "prefix": "FixedKeyHttpSendingData",
+        "body": "FixedKeyHttpSendingData",
+        "description": "Mensagem exibida enquanto dados estão sendo transferidos para o servidor. (Padrão: Enviando dados...)"
+    },
+    "FixedKeyHour": {
+        "prefix": "FixedKeyHour",
+        "body": "FixedKeyHour",
+        "description": "Texto exibido na tela de informações do aplicativo, acima do campo que exibe a data e hora atual. (Padrão: Data e Hora Atuais)"
+    },
+    "FixedKeyFilterNotFound": {
+        "prefix": "FixedKeyFilterNotFound",
+        "body": "FixedKeyFilterNotFound",
+        "description": "Exibido nas telas de listas quando digita um filtro que nao tem resultados (Padrão: Não encontrado)"
+    },
+    "FixedKeyCommandContinue": {
+        "prefix": "FixedKeyCommandContinue",
+        "body": "FixedKeyCommandContinue",
+        "description": "Texto utilizado para a ação de continuar. (Padrão: Continuar)"
+    },
+    "FixedKeyPictureAnytime": {
+        "prefix": "FixedKeyPictureAnytime",
+        "body": "FixedKeyPictureAnytime",
+        "description": "Texto da ação que permite ao usuário tirar fotos a partir do menu superior do aplicativo. (Padrão: Tirar Foto Inconformidade)"
+    },
+    "FixedKeyPictureAnytimePictureTaked": {
+        "prefix": "FixedKeyPictureAnytimePictureTaked",
+        "body": "FixedKeyPictureAnytimePictureTaked",
+        "description": "Mensagem exibida após uma foto é tirada usando a ação do menu presente na barra superior do aplicativo. (Padrão: Foto gravada na galeria!"
+    },
+    "FixedKeyPictureAnytimeCameraOrGallery": {
+        "prefix": "FixedKeyPictureAnytimeCameraOrGallery",
+        "body": "FixedKeyPictureAnytimeCameraOrGallery",
+        "description": "Mensagem exibida quando existe a opção de selecionar uma foto a partir da galeria. (Padrão: Utilizar Camera ou Galeria)"
+    },
+    "FixedKeyPictureAnytimeNoPhotosOnGallery": {
+        "prefix": "FixedKeyPictureAnytimeNoPhotosOnGallery",
+        "body": "FixedKeyPictureAnytimeNoPhotosOnGallery",
+        "description": "Mensagem exibida quando a opção de selecionar foto da galeria foi selecionada e não existem fotos para serem selecionadas. (Padrão: Não há fotos na galeria!)"
+    },
+    "FixedKeyPictureAnytimeGalleryButton": {
+        "prefix": "FixedKeyPictureAnytimeGalleryButton",
+        "body": "FixedKeyPictureAnytimeGalleryButton",
+        "description": "Texto do botão usado para exibir a galeria de fotos. (Padrão: Galeria)"
+    },
+    "FixedKeyPictureAnytimeCameraButton": {
+        "prefix": "FixedKeyPictureAnytimeCameraButton",
+        "body": "FixedKeyPictureAnytimeCameraButton",
+        "description": "Texto do botão usado para exibir a camera. (Padrão: Camera)"
+    },
+    "FixedKeyDisplayablePassword": {
+        "prefix": "FixedKeyDisplayablePassword",
+        "body": "FixedKeyDisplayablePassword",
+        "description": "Mensagem que aparece na tela de mensagem que solicita que o usuário informe a senha. (Padrão: Senha)"
+    },
+    "FixedKeyMsgWaitUi": {
+        "prefix": "FixedKeyMsgWaitUi",
+        "body": "FixedKeyMsgWaitUi",
+        "description": "Mensagem exibida enquanto o aplicativo está fazendo algum processamento. (Padrão: Processando, aguarde...)"
+    },
+    "FixedKeyUnableToInstallNewSourceOffLineData": {
+        "prefix": "FixedKeyUnableToInstallNewSourceOffLineData",
+        "body": "FixedKeyUnableToInstallNewSourceOffLineData",
+        "description": "Mensagem exibida quando o usuário tenta instalar um novo fluxo mas ainda existem dados de outros fluxos para serem enviados. (Padrão: Ha dados offline. Faca um sincronismo antes de instalar um novo fluxo)"
+    },
+    "FixedKeySelectSystem": {
+        "prefix": "FixedKeySelectSystem",
+        "body": "FixedKeySelectSystem",
+        "description": "Titulo da tela de mudança de aplicativo (Padrão: Selecione o Aplicativo)"
+    },
+    "FixedKeyChangeSource": {
+        "prefix": "FixedKeyChangeSource",
+        "body": "FixedKeyChangeSource",
+        "description": "Texto exibido no menu da tela principal para trocar o aplicativo (Padrão: Trocar Aplicativo)"
+    },
+    "FixedKeyInstallNewSource": {
+        "prefix": "FixedKeyInstallNewSource",
+        "body": "FixedKeyInstallNewSource",
+        "description": "Texto exibido no menu superior da tela principal para instalar um novo aplicativo (Padrão: Instalar Novo Aplicativo)"
+    },
+    "FixedKeyDuplicatedSource": {
+        "prefix": "FixedKeyDuplicatedSource",
+        "body": "FixedKeyDuplicatedSource",
+        "description": "Mensagem exibida quando se tenta instalar um aplicativo já instalado. Para exibir o código do fluxo duplicado deve-se usar a tag <installCode>. (Padrão: Aplicativo <installCode> já está instalado)"
+    },
+    "FixedInvalidPlatformVersionOnSource": {
+        "prefix": "FixedInvalidPlatformVersionOnSource",
+        "body": "FixedInvalidPlatformVersionOnSource",
+        "description": "Mensagem exibida quando o usuário tenta instalar um fluxo com versão do Core xMova diferente da versão instalada no dispositivo. Para exibir o código do fluxo e do core deve-se usar as tags <installCode> e <installedVersion>. (Padrão: Aplicativo <installCode> com versão de aplicativo diferente da instalada. (Versão instalada: <installedVersion>))"
+    },
+    "FixedKeyUpdateWithIncompatiblePlatformVersion": {
+        "prefix": "FixedKeyUpdateWithIncompatiblePlatformVersion",
+        "body": "FixedKeyUpdateWithIncompatiblePlatformVersion",
+        "description": "Mensagem exibida quando algum dos aplicativos instalados tem versão do core diferente dos demais instalados e existe uma atualização disponível. A tag <installCodes> é substituída pelos códigos de instalação e pelas respectivas versões do Core. (Padrão: Não foi possível atualizar. Aplicativo com versões de plataforma diferentes.n <installCodes>)"
+    },
+    "FixedKeyUpdateCheckIncompatiblePlatformVersionFail": {
+        "prefix": "FixedKeyUpdateCheckIncompatiblePlatformVersionFail",
+        "body": "FixedKeyUpdateCheckIncompatiblePlatformVersionFail",
+        "description": "Mensagem exibida quando não foi possível comunicar com o servidor para verificar a compatibilidade do core dos fluxos quando existe uma atualização disponível. (Padrão: Não foi possível verificar compatibilidade dos fluxos)"
+    },
+    "FixedKeyMainViewControllerSynchronize": {
+        "prefix": "FixedKeyMainViewControllerSynchronize",
+        "body": "FixedKeyMainViewControllerSynchronize",
+        "description": "Texto da ação usada para forçar um sincronismo foreground presente no menu superior da tela principal. (Padrão: Sincronizar)"
+    },
+    "FixedKeyClear": {
+        "prefix": "FixedKeyClear",
+        "body": "FixedKeyClear",
+        "description": "Texto da ação usada para limpar os dados do fluxo instalado presente na menu superior da tela principal do aplicativo. (Padrão: Limpar)"
+    },
+    "FixedKeyClearMessageConfirm": {
+        "prefix": "FixedKeyClearMessageConfirm",
+        "body": "FixedKeyClearMessageConfirm",
+        "description": "Mensagem exibida quando o usuário seleciona a ação usada para limpar os dados do fluxo. A tag <sourcename> é substituída pelo nome do aplicativo. (Padrão: Deseja realmente apagar todos os dados do fluxo <sourcename>?)"
+    },
+    "FixedKeyWaitingSync": {
+        "prefix": "FixedKeyWaitingSync",
+        "body": "FixedKeyWaitingSync",
+        "description": "Mensagem exibida enquanto uma ação espera o sincronismo terminar para poder ser executada. (Padrão: Aguardando sincronismo...)"
+    },
+    "FixedKeyLoadingSystem": {
+        "prefix": "FixedKeyLoadingSystem",
+        "body": "FixedKeyLoadingSystem",
+        "description": "Mensagem exibida enquanto o aplicativo espera que os dados de um fluxo sejam carregados. (Padrão: Carregando sistema...)"
+    },
+    "FixedKeyCleaning": {
+        "prefix": "FixedKeyCleaning",
+        "body": "FixedKeyCleaning",
+        "description": "Mensagem exibida quando a ação de limpar os dados do fluxo está sendo executada. (Padrão: Limpando...)"
+    },
+    "FixedKeyTypePassword": {
+        "prefix": "FixedKeyTypePassword",
+        "body": "FixedKeyTypePassword",
+        "description": "Mensagem exibida quando uma ação precisa que o usuário informe uma senha para continuar. (Padrão: Informe a senha)"
+    },
+    "FixedKeyTorch": {
+        "prefix": "FixedKeyTorch",
+        "body": "FixedKeyTorch",
+        "description": "Opção de menu Luz exibida na leitura de codigo de barras da camera (Padrão: Luz)"
+    },
+    "FixedKeyBarcodeReadCode": {
+        "prefix": "FixedKeyBarcodeReadCode",
+        "body": "FixedKeyBarcodeReadCode",
+        "description": "Texto curto exibido na tela da leitura de codigo de barras quando um código é lido (nao use pontuação) (Padrão: Lido)"
+    },
+    "FixedKeyBarcodeValidatedCode": {
+        "prefix": "FixedKeyBarcodeValidatedCode",
+        "body": "FixedKeyBarcodeValidatedCode",
+        "description": "Texto curto exibido na tela da leitura de codigo de barras quando um código é validado com sucesso (Padrão: Código Validado!)"
+    },
+    "FixedKeyBarcodeDetailsValidFormat": {
+        "prefix": "FixedKeyBarcodeDetailsValidFormat",
+        "body": "FixedKeyBarcodeDetailsValidFormat",
+        "description": "Texto curto exibido na tela da leitura de codigo de barras quando um formato de código é válido(nao use pontuação). (Padrão: Formato válido)"
+    },
+    "FixedKeyBarcodeDetailsInvalidFormat": {
+        "prefix": "FixedKeyBarcodeDetailsInvalidFormat",
+        "body": "FixedKeyBarcodeDetailsInvalidFormat",
+        "description": "Texto curto exibido na tela da leitura de codigo de barras quando um formato de código é válido(nao use pontuação). (Padrão: Formato inválido)"
+    },
+    "FixedKeyBarcodeDetailsIsLastCode": {
+        "prefix": "FixedKeyBarcodeDetailsIsLastCode",
+        "body": "FixedKeyBarcodeDetailsIsLastCode",
+        "description": "Texto curto exibido na tela da leitura de codigo de barras quando um código é lido repetidas vezes (nao use pontuação). (Padrão: É o último código lido)"
+    },
+    "FixedKeyWordServer": {
+        "prefix": "FixedKeyWordServer",
+        "body": "FixedKeyWordServer",
+        "description": "Texto usado para descrever o tipo da hora. (Padrão: Servidor)"
+    },
+    "FixedKeyWordDevice": {
+        "prefix": "FixedKeyWordDevice",
+        "body": "FixedKeyWordDevice",
+        "description": "Texto usado para descrever o tipo da hora. (Padrão: Dispositivo)"
+    },
+    "FixedKeyWordManual": {
+        "prefix": "FixedKeyWordManual",
+        "body": "FixedKeyWordManual",
+        "description": "Texto usado para descrever o tipo da hora. (Padrão: Manual)"
+    },
+    "FixedKeyMsgUpdateIncompatibleError": {
+        "prefix": "FixedKeyMsgUpdateIncompatibleError",
+        "body": "FixedKeyMsgUpdateIncompatibleError",
+        "description": "Toast exibido quando tem uma atualização do APK disponível mas um dos fluxos nao possui versão de Core compatível com os demais. (Padrão Problema ao atualizar versão)"
+    },
+    "FixedKeyMsgUpdateWithFixedPoint": {
+        "prefix": "FixedKeyMsgUpdateWithFixedPoint",
+        "body": "FixedKeyMsgUpdateWithFixedPoint",
+        "description": "Mensagem quando existe atualizacoes mas ainda existem FixedPoint (boletins abertos). (Padrão: Existem atualizações de aplicativos disponíveis. Finalize todos os boletins para executar as atualizações)"
+    },
+    "FixedKeyWeekDaySunday": {
+        "prefix": "FixedKeyWeekDaySunday",
+        "body": "FixedKeyWeekDaySunday",
+        "description": "Texto usado para descrever o primeiro dia da semana. (Padrão: Domingo)"
+    },
+    "FixedKeyWeekDayMonday": {
+        "prefix": "FixedKeyWeekDayMonday",
+        "body": "FixedKeyWeekDayMonday",
+        "description": "Texto usado para descrever o segundo dia da semana. (Padrão: Segunda-Feira)"
+    },
+    "FixedKeyWeekDayTuesday": {
+        "prefix": "FixedKeyWeekDayTuesday",
+        "body": "FixedKeyWeekDayTuesday",
+        "description": "Texto usado para descrever o terceiro dia da semana. (Padrão: Terça-Feira)"
+    },
+    "FixedKeyWeekDayWednesday": {
+        "prefix": "FixedKeyWeekDayWednesday",
+        "body": "FixedKeyWeekDayWednesday",
+        "description": "Texto usado para descrever o quarto dia da semana. (Padrão: Quarta-Feira)"
+    },
+    "FixedKeyWeekDayThursday": {
+        "prefix": "FixedKeyWeekDayThursday",
+        "body": "FixedKeyWeekDayThursday",
+        "description": "Texto usado para descrever o quinto dia da semana. (Padrão: Quinta-Feira)"
+    },
+    "FixedKeyWeekDayFriday": {
+        "prefix": "FixedKeyWeekDayFriday",
+        "body": "FixedKeyWeekDayFriday",
+        "description": "Texto usado para descrever o sexto dia da semana. (Padrão: Sexta-Feira)"
+    },
+    "FixedKeyWeekDaySaturday": {
+        "prefix": "FixedKeyWeekDaySaturday",
+        "body": "FixedKeyWeekDaySaturday",
+        "description": "Texto usado para descrever o sétimo dia da semana. (Padrão: Sábado)"
+    },
+    "FixedKeyLabelMainPendingRecords": {
+        "prefix": "FixedKeyLabelMainPendingRecords",
+        "body": "FixedKeyLabelMainPendingRecords",
+        "description": "Texto exibido na tela de informações para apresentar que ainda existem registros para serem enviados. (Padrão: Registros Pendentes)"
+    },
+    "FixedKeyLabelLastSuccessCommunication": {
+        "prefix": "FixedKeyLabelLastSuccessCommunication",
+        "body": "FixedKeyLabelLastSuccessCommunication",
+        "description": "Texto exibido na tela de informações no campo que exibe a data da última comunicação com servidor. (Padrão: Última Comunicação com Sucesso)"
+    },
+    "FixedKeyLabelLastAttemptCommunication": {
+        "prefix": "FixedKeyLabelLastAttemptCommunication",
+        "body": "FixedKeyLabelLastAttemptCommunication",
+        "description": "Texto exibido na tela de informações no campo que exibe a data que a última tentativa de comunicação foi feita. (Padrão: Última Tentativa de Comunicação)"
+    },
+    "FixedKeyLabelMainCommunicating": {
+        "prefix": "FixedKeyLabelMainCommunicating",
+        "body": "FixedKeyLabelMainCommunicating",
+        "description": "Texto exibido na tela de informações quando o aplicativo está verificando se existem dados para serem enviados. (Padrão: Comunicando...)"
+    },
+    "FixedKeyLabelMainAllRecordsSent": {
+        "prefix": "FixedKeyLabelMainAllRecordsSent",
+        "body": "FixedKeyLabelMainAllRecordsSent",
+        "description": "Texto exibido na tela de informações quando o aplicativo não possui dados para serem enviados para o servidor. (Padrão: Todos enviados com sucesso)"
+    },
+    "FixedKeyLabelMainRecordNotSentSingular": {
+        "prefix": "FixedKeyLabelMainRecordNotSentSingular",
+        "body": "FixedKeyLabelMainRecordNotSentSingular",
+        "description": "Texto exibido na tela de informações quando existe um dado para ser enviado para o servidor. (Padrão: registro não enviado)"
+    },
+    "FixedKeyLabelMainRecordNotSentPlural": {
+        "prefix": "FixedKeyLabelMainRecordNotSentPlural",
+        "body": "FixedKeyLabelMainRecordNotSentPlural",
+        "description": "Texto exibido na tela de informações quando existe mais de um dado para ser enviado. (Padrão: registros não enviados)"
+    },
+    "FixedKeyLabelMainInstallCode": {
+        "prefix": "FixedKeyLabelMainInstallCode",
+        "body": "FixedKeyLabelMainInstallCode",
+        "description": "Texto exibido na tela de informações no campo que apresenta o código de instalação do fluxo. (Padrão: Código de Instalação do Fluxo)"
+    },
+    "FixedKeyLabelMainPhoneNumber": {
+        "prefix": "FixedKeyLabelMainPhoneNumber",
+        "body": "FixedKeyLabelMainPhoneNumber",
+        "description": "Texto exibido na tela de informações no campo que exibe o número do telefone. (Padrão: Número de Telefone)"
+    },
+    "FixedKeyInputKeyboardDecimalSymbol": {
+        "prefix": "FixedKeyInputKeyboardDecimalSymbol",
+        "body": "FixedKeyInputKeyboardDecimalSymbol",
+        "description": "Texto exibido no teclado numerico para representar o separador decimal (Padrão: ,)"
+    },
+    "FixedKeyNoNetworkSynchronizeFail": {
+        "prefix": "FixedKeyNoNetworkSynchronizeFail",
+        "body": "FixedKeyNoNetworkSynchronizeFail",
+        "description": "Mensagem exibida quando não é possível executar um sincronismo em foreground. (Padrão: Não há sinal de rede. Não foi possível sincronizar dados)"
+    },
+    "FixedKeySyncAgain": {
+        "prefix": "FixedKeySyncAgain",
+        "body": "FixedKeySyncAgain",
+        "description": "Texto da ação usada para tentar realizar um sincronismo em foreground novamente. (Padrão: Novamente)"
+    },
+    "FixedKeyInsertAppCode": {
+        "prefix": "FixedKeyInsertAppCode",
+        "body": "FixedKeyInsertAppCode",
+        "description": "Mensagem exibida na tela de instalação do aplicativo. (Padrão: Digite o código do aplicativo)"
+    },
+    "FixedKeyCodeMustHaveAtLeastTwoDigits": {
+        "prefix": "FixedKeyCodeMustHaveAtLeastTwoDigits",
+        "body": "FixedKeyCodeMustHaveAtLeastTwoDigits",
+        "description": "Mensagem exibida quando o código de instalação tem menos do que dois dígitos. (Padrão O código deve possuir no mínimo 2 dígitos)"
+    },
+    "FixedKeyCouldntDownloadAppFileCorrupted": {
+        "prefix": "FixedKeyCouldntDownloadAppFileCorrupted",
+        "body": "FixedKeyCouldntDownloadAppFileCorrupted",
+        "description": "Mensagem exibida quando não é possível carregar o fluxo que foi baixado. (Padrão: Não foi possível baixar o aplicativo. Arquivo corrompido)"
+    },
+    "FixedKeyMainActivitySubMenuOptions": {
+        "prefix": "FixedKeyMainActivitySubMenuOptions",
+        "body": "FixedKeyMainActivitySubMenuOptions",
+        "description": "Texto da ação do menu superior, somente exibido quando tem espaço para tal. (Padrão: Opções)"
+    },
+    "FixedKeyHttpWritingEntity": {
+        "prefix": "FixedKeyHttpWritingEntity",
+        "body": "FixedKeyHttpWritingEntity",
+        "description": "Mensagem exibida enquanto os dados da entidade recebidos da web estão sendo gravados. Sempre é adicionado o nome da entidade ao final do texto. (Padrão: Gravando)"
+    },
+    "FixedKeyConnectionAnalysisPasswordDoesntMatch": {
+        "prefix": "FixedKeyConnectionAnalysisPasswordDoesntMatch",
+        "body": "FixedKeyConnectionAnalysisPasswordDoesntMatch",
+        "description": "Mensagem exibida quando a senha digitada para o teste da rede de dados está incorreta. (Padrão: Senha não confere)"
+    },
+    "FixedKeyMsgWait": {
+        "prefix": "FixedKeyMsgWait",
+        "body": "FixedKeyMsgWait",
+        "description": "Mensagem exibida quando o aplicativo precisa aguardar que algo aconteça. Esta tela pode ser exibida a partir do fluxo usando a instrução ‘startwait’. (Padrão: Aguarde!)"
+    },
+    "FixedKeyMsgScheduledMessage": {
+        "prefix": "FixedKeyMsgScheduledMessage",
+        "body": "FixedKeyMsgScheduledMessage",
+        "description": "Texto exibido no campo que apresenta a mensagem. (Padrão: Mensagem:)"
+    },
+    "FixedKeyMsgScheduledTitle": {
+        "prefix": "FixedKeyMsgScheduledTitle",
+        "body": "FixedKeyMsgScheduledTitle",
+        "description": "Texto exibido no campo que apresenta o título da mensagem. (Padrão: Título:)"
+    },
+    "FixedKeyMsgScheduledHour": {
+        "prefix": "FixedKeyMsgScheduledHour",
+        "body": "FixedKeyMsgScheduledHour",
+        "description": "Texto exibido no campo que apresenta o horário que a mensagem foi recebida. (Padrão: Horário:)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerConnecting": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerConnecting",
+        "body": "FixedKeyBluetoothReceiverViewControllerConnecting",
+        "description": "Mensagem exibida quando uma conexão via Bluetooth está sendo estabelecida para enviar dados. Para inserir o nome do dispositivo no meio da frase use a tag <device>. (Padrão: Conectando ao Sender...)"
+    },
+    "FixedKeyBluetoothReceiverViewControllerConnected": {
+        "prefix": "FixedKeyBluetoothReceiverViewControllerConnected",
+        "body": "FixedKeyBluetoothReceiverViewControllerConnected",
+        "description": "Mensagem exibida quando uma conexão via Bluetooth foi estabelecida para enviar dados. (Padrão: Conectado)"
+    },
+    "FixedKeyUserDateTimeViewControllerConfirmDeviceDateHour": {
+        "prefix": "FixedKeyUserDateTimeViewControllerConfirmDeviceDateHour",
+        "body": "FixedKeyUserDateTimeViewControllerConfirmDeviceDateHour",
+        "description": "Mensagem exibida quando o atributo que requer que a hora informada seja comparada com o horário do dispositivo está presente. (Padrão: Data manual informada diferente do horário do celular. Confirma?)"
+    },
+    "FixedKeyMsgUpdateWithBeforeUpdateEvent": {
+        "prefix": "FixedKeyMsgUpdateWithBeforeUpdateEvent",
+        "body": "FixedKeyMsgUpdateWithBeforeUpdateEvent",
+        "description": "Mensagem exibida quando o evento executado antes da atualização do aplicativo ser executada retorna ‘false’ para que o aplicativo não seja atualizado. (Padrão: Existem operações que devem ser realizadas antes do aplicativo ser atualizado)"
+    },
+    "FixedKeyCloseApplicationMessage": {
+        "prefix": "FixedKeyCloseApplicationMessage",
+        "body": "FixedKeyCloseApplicationMessage",
+        "description": "Mensagem apresentada quando o usuário seleciona a opção de sair do aplicativo presente no menu da barra superior ou quando seleciona a opção de voltar do dispositivo estando na tela principal ou na tela de Crud Actions. (Padrão: Deseja encerrar o aplicativo?)"
+    },
+    "FixedKeyNanoServerTitle": {
+        "prefix": "FixedKeyNanoServerTitle",
+        "body": "FixedKeyNanoServerTitle",
+        "description": "Título da tela que faz com que o dispositivo atue como um servidor. (Padrão: Servidor)"
+    },
+    "FixedKeyNanoServerTurnOn": {
+        "prefix": "FixedKeyNanoServerTurnOn",
+        "body": "FixedKeyNanoServerTurnOn",
+        "description": "Texto da ação que faz com que a ação de receber dados via http seja acionada. (Padrão: Ligar)"
+    },
+    "FixedKeyNanoServerTurnOff": {
+        "prefix": "FixedKeyNanoServerTurnOff",
+        "body": "FixedKeyNanoServerTurnOff",
+        "description": "Texto da ação que faz com que a ação de receber dados via http seja interrompida. (Padrão: Desligar)"
+    },
+    "FixedKeyNanoServerDataCollected": {
+        "prefix": "FixedKeyNanoServerDataCollected",
+        "body": "FixedKeyNanoServerDataCollected",
+        "description": "Texto do campo que apresenta a quantidade total de dados recebidos via http. (Padrão: Dados Recebidos)"
+    },
+    "FixedKeyHardwareLogTitle": {
+        "prefix": "FixedKeyHardwareLogTitle",
+        "body": "FixedKeyHardwareLogTitle",
+        "description": "Título da tela que apresenta os dados de hardware do aplicativo e também os dados do GPS (Padrão: Hardware Log)"
+    },
+    "FixedKeyNanoIPTitle": {
+        "prefix": "FixedKeyNanoIPTitle",
+        "body": "FixedKeyNanoIPTitle",
+        "description": "Texto exibido no campo que apresenta o IP do dispositivo na tela da funcionalidade de NanoServer. (Padrão: Endereço de IP)"
+    },
+    "FixedKeyNanoSendedData": {
+        "prefix": "FixedKeyNanoSendedData",
+        "body": "FixedKeyNanoSendedData",
+        "description": "Texto do campo que apresenta quantos dados cada dispositivo que se comunicou com o NanoServer enviou. (Padrão: Dados enviados)"
+    },
+    "FixedKeyGpsDisabledMessage": {
+        "prefix": "FixedKeyGpsDisabledMessage",
+        "body": "FixedKeyGpsDisabledMessage",
+        "description": "Texto exibido na mensagem que é apresentada ao usuário quando o fluxo usa GPS e o mesmo está desabilitado. (Padrão: Ative o GPS para que o aplicativo funcione corretamente.)"
+    },
+    "FixedKeyNetworkTestQuestion": {
+        "prefix": "FixedKeyNetworkTestQuestion",
+        "body": "FixedKeyNetworkTestQuestion",
+        "description": "Pergunta exibida ao usuário para iniciar o teste de rede de dados."
+    },
+    "FixedKeyAudioRecordToRecord": {
+        "prefix": "FixedKeyAudioRecordToRecord",
+        "body": "FixedKeyAudioRecordToRecord",
+        "description": "Verbo único, o mais curto possível a ser usado para iniciar a gravação de áudio, p.e.: Gravar."
+    },
+    "FixedKeyAudioRecordToStop": {
+        "prefix": "FixedKeyAudioRecordToStop",
+        "body": "FixedKeyAudioRecordToStop",
+        "description": "Verbo único, o mais curto possível a ser usado para parar a gravação de áudio, p.e.: Parar."
+    },
+    "FixedKeyAudioRecordToPlay": {
+        "prefix": "FixedKeyAudioRecordToPlay",
+        "body": "FixedKeyAudioRecordToPlay",
+        "description": "Verbo único, o mais curto possível a ser usado para tocar o áudio, p.e.: Tocar."
+    },
+    "FixedKeyAudioToastWait": {
+        "prefix": "FixedKeyAudioToastWait",
+        "body": "FixedKeyAudioToastWait",
+        "description": "Frase que identifica a ação do usuário ao tentar reproduzir nada (sem áudio gravado) ou voltar/tocar enquanto está gravando; p.e.: Registro de áudio não gravado ou gravação em andamento."
+    },
+    "FixedKeyAudioBusyMessage": {
+        "prefix": "FixedKeyAudioBusyMessage",
+        "body": "FixedKeyAudioBusyMessage",
+        "description": "Frase que identifica que o dispositivo de áudio está ocupado; p.e: Aguarde, áudio ocupado."
+    },
+    "FixedKeySocketMessageTitle": {
+        "prefix": "FixedKeySocketMessageTitle",
+        "body": "FixedKeySocketMessageTitle",
+        "description": "Identifica o título da mensagem recebida do Socket."
+    },
+    "FixedKeySocketMessageTextDialogEmpty": {
+        "prefix": "FixedKeySocketMessageTextDialogEmpty",
+        "body": "FixedKeySocketMessageTextDialogEmpty",
+        "description": "Mensagem quando o campo de mensagem foi enviado e não preenchido."
+    },
+    "FixedKeySocketMessageOkButton": {
+        "prefix": "FixedKeySocketMessageOkButton",
+        "body": "FixedKeySocketMessageOkButton",
+        "description": "Verbo para responder uma mensagem, p.e, Responder."
+    },
+    "FixedKeySocketMessageStopButton": {
+        "prefix": "FixedKeySocketMessageStopButton",
+        "body": "FixedKeySocketMessageStopButton",
+        "description": "Verbo para não responder uma mensagem, p.e: Ignorar."
+    },
+    "FixedKeyAppXid": {
+        "prefix": "FixedKeyAppXid",
+        "body": "FixedKeyAppXid",
+        "description": "Identifica o XID, ou identificador Xmova único do celular."
+    },
+    "FixedKeyDrawSave": {
+        "prefix": "FixedKeyDrawSave",
+        "body": "FixedKeyDrawSave",
+        "description": "Identifica o ato de salvar a assinatura."
+    },
+    "FixedKeyDrawClear": {
+        "prefix": "FixedKeyDrawClear",
+        "body": "FixedKeyDrawClear",
+        "description": "Identifica o ato de limpar uma assinatura."
+    },
+    "FixedKeyDrawSelectColorTitle": {
+        "prefix": "FixedKeyDrawSelectColorTitle",
+        "body": "FixedKeyDrawSelectColorTitle",
+        "description": "Título de seleção das cores para marcação."
+    },
+    "FixedKeyDrawSelectColorAction": {
+        "prefix": "FixedKeyDrawSelectColorAction",
+        "body": "FixedKeyDrawSelectColorAction",
+        "description": "Identifica a opção de seleção de cor: p,e.: Cores ou Cor."
+    },
+    "FixedKeyPictureMarkerCameraOK": {
+        "prefix": "FixedKeyPictureMarkerCameraOK",
+        "body": "FixedKeyPictureMarkerCameraOK",
+        "description": "Salva a imagem para receber marcações."
+    },
+    "FixedKeyPictureMarkerCameraCancel": {
+        "prefix": "FixedKeyPictureMarkerCameraCancel",
+        "body": "FixedKeyPictureMarkerCameraCancel",
+        "description": "Cancelar a imagem atual e tirar outra."
+    },
+    "FixedKeyPictureMarkerDrawSave": {
+        "prefix": "FixedKeyPictureMarkerDrawSave",
+        "body": "FixedKeyPictureMarkerDrawSave",
+        "description": "Salva a imagem resultante no apontamento, p.e.: Gravar."
+    },
+    "FixedKeyPictureMarkerDrawClear": {
+        "prefix": "FixedKeyPictureMarkerDrawClear",
+        "body": "FixedKeyPictureMarkerDrawClear",
+        "description": "Limpa as marcações efetuadas na imagem, p.e.: Limpar."
+    },
+    "FixedKeyPictureMarkerDrawSelectColorTitle": {
+        "prefix": "FixedKeyPictureMarkerDrawSelectColorTitle",
+        "body": "FixedKeyPictureMarkerDrawSelectColorTitle",
+        "description": "Título de seleção de cores para marcação."
+    },
+    "FixedKeyPictureMarkerDrawSelectColorAction": {
+        "prefix": "FixedKeyPictureMarkerDrawSelectColorAction",
+        "body": "FixedKeyPictureMarkerDrawSelectColorAction",
+        "description": "Identifica a opção de seleção de cor: p,e.: Cores ou Cor."
+    },
+    "FixedKeyPictureMarkerCaptureAgain": {
+        "prefix": "FixedKeyPictureMarkerCaptureAgain",
+        "body": "FixedKeyPictureMarkerCaptureAgain",
+        "description": "Captura outra imagem e limpa as marcações feitas."
+    }
+}
