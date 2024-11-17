@@ -157,22 +157,22 @@
     "APP - bluetooth": {
         "prefix": "bluetooth",
         "body": "bluetooth",
-        "description": "veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#bluetooth-ref"
+        "description": "Usado para receber ou enviar arquivos via bluetooth. (default: sender)veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#bluetooth-ref"
     },
     "APP - sender": {
         "prefix": "sender",
         "body": "sender",
-        "description": "Habilita a função de envio de dados via bluetooth aplicativos xmova."
+        "description": "Habilita a função de envio de dados via bluetooth aplicativos xmova (ex.: bluetooth sender)."
     },
     "APP - receiver": {
         "prefix": "receiver",
         "body": "receiver",
-        "description": "Habilita a função de recebimento de dados via bluetooth aplicativos xmova."
+        "description": "Habilita a função de recebimento de dados via bluetooth aplicativos xmova (ex.: bluetooth receiver)."
     },
     "APP - fileReceiver": {
         "prefix": "fileReceiver",
         "body": "fileReceiver",
-        "description": "Habilita a função de recebimento de arquivo via bluetooth aplicativo xmova e PegaDados."
+        "description": "Define que será a opção para receber arquivos (ex.: bluetooth fileReceiver). Para usar esta opção deve ser criada uma entidade de nome ReceivedFiles com os seguintes campos (id String uuid, name String notFill, date Now, content bytes)."
     },
     "APP - restorePassword": {
         "prefix": "restorePassword",
@@ -1831,12 +1831,12 @@
     "MODEL - confirm": {
         "prefix": "confirm",
         "body": "confirm",
-        "description": "Mostra a tela de confirmação antes da criação ou finalização da entidade. (ex.: confirm=Create|Finish)"
+        "description": "Mostra a tela de confirmação antes da criação ou finalização da entidade. (ex.: confirm=Create|Finish). Ou Retorna tela para confirmação do campo. O retorno false, não permite prosseguir com o fluxo."
     },
     "MODEL - delete": {
         "prefix": "delete",
         "body": "delete",
-        "description": "Permite que o usuário delete dinamicamente um registro da entidade."
+        "description": "Permite que o usuário delete dinamicamente um registro da entidade (Ex: DELETE FROM Entidade WHERE id == :campo)."
     },
     "MODEL - descriptionFields": {
         "prefix": "descriptionFields",
@@ -1856,7 +1856,7 @@
     "MODEL - insert": {
         "prefix": "insert",
         "body": "insert",
-        "description": "Permite que o usuário insira dinamicamente um registro na entidade."
+        "description": "Permite que o usuário insira dinamicamente um registro na entidade. (Ex: INSERT INTO Entidade (id,descricao) VALUES (:campo1,:campo2))"
     },
     "MODEL - insertFields": {
         "prefix": "insertFields",
@@ -1916,7 +1916,7 @@
     "MODEL - sync": {
         "prefix": "sync",
         "body": "sync",
-        "description": "Define o tipo de sincronismo da entidade. (veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#sync-ref)"
+        "description": "Define o tipo de sincronismo da entidade. Efetua um sincronismo Background. Não permite prosseguir caso esteja offline. (veja: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/model.html#sync-ref)"
     },
     "MODEL - autoFill": {
         "prefix": "autoFill",
@@ -1946,6 +1946,11 @@
     "MODEL - fillCondition": {
         "prefix": "fillCondition",
         "body": "fillCondition",
+        "description": "Verifica se o campo deve ser preenchido. Se retornado false, permite que o usuario passe para o próximo campo sem informar um valor."
+    },
+    "MODEL - fillCondition=": {
+        "prefix": "fillCondition=",
+        "body": "fillCondition=\"$1\"",
         "description": "Verifica se o campo deve ser preenchido. Se retornado false, permite que o usuario passe para o próximo campo sem informar um valor."
     },
     "MODEL - fillConfirm": {
@@ -2266,7 +2271,7 @@
     "MODEL - UnselectedRecords": {
         "prefix": "UnselectedRecords",
         "body": "UnselectedRecords",
-        "description": "Num campo de checklist são armazenados os ids dos registros que foram selecionados. Para se obter os ids dos que não foram selecionados declara-se um outro campo com nome terminando com ‘UnselectedRecords’ exemplo: funcionarios List<Funcionario> funcionariosUnselectedRecords List<Funcionario> notFill. "
+        "description": "Num campo de checklist são armazenados os ids dos registros que foram selecionados. Para se obter os ids dos que não foram selecionados declara-se um outro campo com nome terminando com ‘UnselectedRecords’ exemplo: funcionarios List<Funcionario> funcionariosUnselectedRecords List<Funcionario> notFill."
     },
     "MODEL - crudActions": {
         "prefix": "crudActions",
@@ -2276,7 +2281,7 @@
     "MODEL - crud": {
         "prefix": "crud",
         "body": "crud",
-        "description": "Chama o preenchimento de uma entidade."
+        "description": "Indica que sera aberto um crud para preencher uma entidade, criando um novo registro (Chama o preenchimento de uma entidade) (Ex: crud Boletim)."
     },
     "MODEL - isVisible": {
         "prefix": "isVisible",
@@ -2407,7 +2412,7 @@
         "body": [
             "// Local - MODEL",
             "Local sync=beforeInstall|in",
-            "\tSEQ_DB long ",
+            "\tSEQ_DB long",
             "\tNOME Str",
             "\tTIMEZONE Str",
             "\tFILIAL_SEQ_DB Filial"
@@ -2453,11 +2458,466 @@
             "",
             "// Local - MODEL",
             "Local sync=beforeInstall|in",
-            "\tSEQ_DB long ",
+            "\tSEQ_DB long",
             "\tNOME Str",
             "\tTIMEZONE Str",
             "\tFILIAL_SEQ_DB Filial"
         ],
         "description": "Empresa | Filial | Local colocar no MODEL"
+    },
+    "APP | MODEL - actionbarsubtitle": {
+        "prefix": "actionbarsubtitle",
+        "body": "actionbarsubtitle",
+        "description": "Exibe mensagens abaixo do título da tela. Para remover o texto deve usar o arroba (@)."
+    },
+    "APP | MODEL - addDate": {
+        "prefix": "addDate",
+        "body": "addDate",
+        "description": "Função para somar ou subtrair tempo de um campo Date. Recebe uma data, um tempo e um tipo (h, m, s). O tempo pode ser positivo ou negativo. Método retorna um date com a soma dos dois valores (Ex: return addDate dataAtual 1 @m)."
+    },
+    "APP | MODEL - clear": {
+        "prefix": "clear",
+        "body": "clear",
+        "description": "Realiza a limpeza (apaga todos os dados) do aplicativo."
+    },
+    "APP | MODEL - concat": {
+        "prefix": "concat",
+        "body": "concat",
+        "description": "Faz a junção de dois textos (Ex: return concat campo1 campo2)."
+    },
+    "APP | MODEL - cryptography": {
+        "prefix": "cryptography",
+        "body": "cryptography",
+        "description": "Retorna um texto encriptografado conforme um algoritmo definido (apenas os suportados pelo Java: SHA-1, SHA-256 e MD5). Recebe dois parâmetros (ambos strings): algoritmo e field/string (Ex: String encrypt = cryptography @SHA-1 senha)."
+    },
+    "APP | MODEL - replaceall": {
+        "prefix": "replaceall",
+        "body": "replaceall",
+        "description": "Retorna uma string modificada de acordo com a regex e o replace. Recebe três parâmetros, todos strings: element, regex e replacement. Caso não detecte algum padrão, retorna a String vazia (Ex: String telephone = replaceall \"1239101234\" \"(/d{2})(/d{4})(/d*)\" \"($1)-$2-$3\")."
+    },
+    "APP | MODEL - matches": {
+        "prefix": "matches",
+        "body": "matches",
+        "description": "Retorna um boleano que identifica se uma string contém um padrão de expressão regular. Recebe dois parâmetros, todos strings: element e regex (matches \"1239101234\" \"(/d{2})(/d{4})(/d*)\")."
+    },
+    "APP | MODEL - confirm password=": {
+        "prefix": "confirm password=",
+        "body": "confirm password=",
+        "description": "Retorna tela para confirmação do campo através do input numérico. Caso o parametro passado seja igual a 0(zero), é gerado um número aleatório com 4 digitos, e o usuário deve repetir este número no input (ex.: confirm password=0). Caso o parametro passado seja maior que 0(zero), é gerado um número aleatório com 4 digitos a partir do número passado, e o usuário deve informar um número de 4 digitos chamado contra-senha (ex.: confirm password=123)."
+    },
+    "APP | MODEL - confirm lang=": {
+        "prefix": "confirm lang=",
+        "body": "confirm lang=",
+        "description": "É passado uma chave presente no Lang, que contém o texto que será apresentado na tela (Ex: return confirm password=0 lang=custom.msgCampo1)."
+    },
+    "APP | MODEL - confirm lang= vars=": {
+        "prefix": "confirm lang= vars=",
+        "body": "confirm lang= vars=",
+        "description": "Variáveis passadas para compor a mensagem presente no custom lang passado (Ex: return confirm password=0 lang=custom.msgCampo1 vars=var1:campo1)."
+    },
+    "APP | MODEL - crud finishRecord": {
+        "prefix": "crud finishRecord",
+        "body": "crud finishRecord",
+        "description": "Indica que a entidade aberta será finalizada."
+    },
+    "APP | MODEL - finishRecord": {
+        "prefix": "finishRecord",
+        "body": "finishRecord",
+        "description": "Quando executado em conjunto com um record finaliza o record que foi passado (Ex: finishRecord Entidade). Para ser usado em eventos de CRUD ou em um action de entidade para iniciar o processo de finalização do registro. Por exemplo: após preencher algum campo da entidade Boletim, o desenvolvedor pode chamar esta instrução para iniciar o processo de finalização do Boletim."
+    },
+    "APP | MODEL - getGCMIdentifier": {
+        "prefix": "getGCMIdentifier",
+        "body": "getGCMIdentifier",
+        "description": "Retorna o identificador do Google correspondente ao dispositivo do usuário. Caso não tenha conseguido obter, por falta de Google Play Services instalado, retorna uma string vazia."
+    },
+    "APP | MODEL - currentDate": {
+        "prefix": "currentDate",
+        "body": "currentDate",
+        "description": "Retorna a data atual."
+    },
+    "APP | MODEL - currentDateType": {
+        "prefix": "currentDateType",
+        "body": "currentDateType",
+        "description": "Retorna o tipo da data no celular no momento. Valores retornados: “S”, “G”, “M”, “D” e “U”."
+    },
+    "APP | MODEL - currentDateTypeIsValid": {
+        "prefix": "currentDateTypeIsValid",
+        "body": "currentDateTypeIsValid",
+        "description": "Retorna se o tipo da data é válida. Retorna true se for do Servidor ou GPS. Retorna false para qualquer outro tipo."
+    },
+    "APP | MODEL - getYear": {
+        "prefix": "getYear",
+        "body": "getYear",
+        "description": "Retorna um inteiro correspondente ao ano atual, de acordo com a data do aplicativo (Ex: return data getYear)."
+    },
+    "APP | MODEL - getMonth": {
+        "prefix": "getMonth",
+        "body": "getMonth",
+        "description": "Retorna um inteiro correspondente ao mês atual, de acordo com a data do aplicativo (Ex: return data getMonth)."
+    },
+    "APP | MODEL - getDay": {
+        "prefix": "getDay",
+        "body": "getDay",
+        "description": "Retorna um inteiro correspondente ao dia atual, de acordo com a data do aplicativo (Ex: return data getDay)."
+    },
+    "APP | MODEL - getHour": {
+        "prefix": "getHour",
+        "body": "getHour",
+        "description": "Retorna um inteiro correspondente a hora atual, de acordo com a data do aplicativo (Ex: return data getHour)."
+    },
+    "APP | MODEL - getMinutes": {
+        "prefix": "getMinutes",
+        "body": "getMinutes",
+        "description": "Retorna um inteiro correspondente ao minuto atual, de acordo com a data do aplicativo (Ex: return data getMinutes)."
+    },
+    "APP | MODEL - getSeconds": {
+        "prefix": "getSeconds",
+        "body": "getSeconds",
+        "description": "Retorna um inteiro correspondente ao segundo atual, de acordo com a data do aplicativo (Ex: return data getSeconds)."
+    },
+    "APP | MODEL - getWeekDay": {
+        "prefix": "getWeekDay",
+        "body": "getWeekDay",
+        "description": "Retorna um inteiro correspondente ao dia da semana atual, de acordo com a data do aplicativo. (Domingo: 1, Segunda: 2, Terça: 3, Quarta: 4, Quinta: 5, Sexta: 6, Sábado: 7 (Ex: return data getWeekDay))"
+    },
+    "APP | MODEL - difDateMilli": {
+        "prefix": "difDateMilli",
+        "body": "difDateMilli",
+        "description": "Retorna diferença entre duas datas em milissegundos. Informar data menor seguido de data maior (Ex: return difDateMilli data1 data2) (Ex: return difDateMilli 0 data1)."
+    },
+    "APP | MODEL - getYearWeek": {
+        "prefix": "getYearWeek",
+        "body": "getYearWeek",
+        "description": "Retorna um valor inteiro representando o dia da semana do ano."
+    },
+    "APP | MODEL - generateuuid": {
+        "prefix": "generateuuid",
+        "body": "generateuuid",
+        "description": "Retorna um valor randômico baseado na data/hora válida que representa um uuid sequencial (igual presente nos apontamentos) para o fluxo (Ex: Long seqApontamento = generateuuid)."
+    },
+    "APP | MODEL - dateToMilli": {
+        "prefix": "dateToMilli",
+        "body": "dateToMilli",
+        "description": "Transforma um valor Date em Millissegundos do Java. Entrada com timezone aplicado (obra/parametro) => Saída em UTC. Entrada pode ser no timezone definido pelo usuário. Se nenhum timezone for passado como parâmetro, utilizará o timezone da obra. (Ex: return dateToMilli data1) (Ex: return dateToMilli data1 @\"America/Campo_Grande\") Timezones suportados no seguinte endereço: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/timezones.html"
+    },
+    "APP | MODEL - milliToDate": {
+        "prefix": "milliToDate",
+        "body": "milliToDate",
+        "description": "Transforma um valor Millissegundos em Date. Entrada em UTC => Saída com timezone aplicado (obra/parametro). Saída pode ser no timezone definido pelo usuário. Se nenhum timezone for passado como parâmetro, utilizará o timezone da obra. (Ex: return milliToDate longData1) (Ex: return milliToDate longData1 @\"America/Campo_Grande\") Timezones suportados no seguinte endereço: https://xmova-server-h1.simova.ws/doc/app/xmovaandroid/timezones.html"
+    },
+    "APP | MODEL - formatDateMilli": {
+        "prefix": "formatDateMilli",
+        "body": "formatDateMilli",
+        "description": "Recebe millisegundos e retorna uma string no formato hh:mm:ss."
+    },
+    "APP | MODEL - goToField": {
+        "prefix": "goToField",
+        "body": "goToField",
+        "description": "Indica o preenchimento de um campo."
+    },
+    "APP | MODEL - isBetweenDates": {
+        "prefix": "isBetweenDates",
+        "body": "isBetweenDates",
+        "description": "Recebe 3 datas, e verifica que se 3ª data está entre a 1ª e a 2ª data. Se estiver retorna 1, caso contrário retorna 0."
+    },
+    "APP | MODEL - include": {
+        "prefix": "include",
+        "body": "include",
+        "description": "Inclue as datas de inicio e fim na validação. (ex.: include=true)."
+    },
+    "APP | MODEL - isOnline": {
+        "prefix": "isOnline",
+        "body": "isOnline",
+        "description": "Retorna um inteiro indicando se o aplicativo está online (1) ou offline (0)."
+    },
+    "APP | MODEL - log": {
+        "prefix": "log",
+        "body": "log",
+        "description": "Imprime no log o texto passado."
+    },
+    "APP | MODEL - msg": {
+        "prefix": "msg",
+        "body": "msg",
+        "description": "Mostra tela com mensagem."
+    },
+    "APP | MODEL - msg wait=": {
+        "prefix": "msg wait=",
+        "body": "msg wait=",
+        "description": "Pausa o fluxo de execução até que a tela da mensagem seja fechada.(ex.: msg wait=true)"
+    },
+    "APP | MODEL - msg lang=": {
+        "prefix": "msg lang=",
+        "body": "msg lang=",
+        "description": "É passado uma chave presente no Lang, que contém o texto que será apresentado na tela."
+    },
+    "APP | MODEL - msg lang= vars=": {
+        "prefix": "msg lang= vars=",
+        "body": "msg lang= vars=",
+        "description": "Variáveis passadas para compor a mensagem presente no custom lang passado."
+    },
+    "APP | MODEL - percentage": {
+        "prefix": "percentage",
+        "body": "percentage",
+        "description": "Usada para calcular porcentagens no fluxo."
+    },
+    "APP | MODEL - playSound": {
+        "prefix": "playSound",
+        "body": "playSound",
+        "description": "Usada para execução de sons no fluxo. (default: BarcodeBeep)."
+    },
+    "APP | MODEL - playSound name=": {
+        "prefix": "playSound name=",
+        "body": "playSound name=",
+        "description": "Usado para definir qual será o som a ser tocado. Opções disponíveis: BarcodeBeep, BarcodeError, AlertTimer, BarcodeRead. (ex.: playSound name=BarcodeBeep)."
+    },
+    "APP | MODEL - playSound loop=": {
+        "prefix": "playSound loop=",
+        "body": "playSound loop=",
+        "description": "Usado para definir quantas vezes o som deverá ser executado. (default: 0 - Tocado uma vez sem repetição). (ex.: playSound loop=2)."
+    },
+    "APP | MODEL - printEntity": {
+        "prefix": "printEntity",
+        "body": "printEntity",
+        "description": "Imprime no console todos os registros da entidade."
+    },
+    "APP | MODEL - restart": {
+        "prefix": "restart",
+        "body": "restart",
+        "description": "Fecha e abre o aplicativo."
+    },
+    "APP | MODEL - save": {
+        "prefix": "save",
+        "body": "save",
+        "description": "Salva no banco o registro informado como parâmetro. Todas as telas que tiverem uma instância desse registro receberão o novo registro salvo (Ex: save registroEntidade)."
+    },
+    "APP | MODEL - saveSyncOut": {
+        "prefix": "saveSyncOut",
+        "body": "saveSyncOut",
+        "description": "Se presente, e a entidade for SyncOut, grava também uma cópia do registro na entidade de sync. Isso fará com que o registro que acabou de ser alterado e salvo vá para o servidor no próximo sync (Ex: save registroEntidade saveSyncOut)."
+    },
+    "APP | MODEL - syncOutOnly": {
+        "prefix": "syncOutOnly",
+        "body": "syncOutOnly",
+        "description": "Se a entidade for SyncOut, grava o registro apenas na entidade de _SyncOut. Isso fará com que o registro que acabou de ser alterado e salvo vá para o servidor no próximo sync (Ex: save registroEntidade syncOutOnly)."
+    },
+    "APP | MODEL - simpledateformat": {
+        "prefix": "simpledateformat",
+        "body": "simpledateformat",
+        "description": "Usado para formatar uma data no padrão Java. Utiliza uma string de formato e recebe um long de data e horas. (ex.: simpledateformat @”hh:mm:ss” variavel_long)."
+    },
+    "APP | MODEL - hoursformat": {
+        "prefix": "hoursformat",
+        "body": "hoursformat",
+        "description": "Usado para gerar uma String em formatado contador/decorrer de tempo da forma: hh*:mm:ss. A entrada esperada é do tipo long, do qual representa o tempo em millisegundos."
+    },
+    "APP | MODEL - sync type=background": {
+        "prefix": "sync type=background",
+        "body": "sync type=background",
+        "description": "Envia o registro que acabou de ser alterado para o server."
+    },
+    "APP | MODEL - setAlertTimer": {
+        "prefix": "setAlertTimer",
+        "body": "setAlertTimer",
+        "description": "Inicia o processo de alerta. Que após passado o tempo total de tolerancia mostra uma mensagem de alerta na tela (Ex: setAlertTimer lang=custom.msgTempoPrimeiroApont totalTime=tolerancia)."
+    },
+    "APP | MODEL - setAlertTimer message": {
+        "prefix": "setAlertTimer message",
+        "body": "setAlertTimer message",
+        "description": "É passado uma chave presente no Lang, que contém o texto que será apresentado na tela."
+    },
+    "APP | MODEL - setAlertTimer time": {
+        "prefix": "setAlertTimer time",
+        "body": "setAlertTimer time",
+        "description": "Define o tempo de tolerância do último alertTimer."
+    },
+    "APP | MODEL - setAlertTimer snooze": {
+        "prefix": "setAlertTimer snooze",
+        "body": "setAlertTimer snooze",
+        "description": "Define o tempo de espera entre a execução de um alerta e outro. Caso este valor não seja passado é usado o valor da variável do app timerInterval que por padrão tem o valor de 1m."
+    },
+    "APP | MODEL - setAlertTimer repeat": {
+        "prefix": "setAlertTimer repeat",
+        "body": "setAlertTimer repeat",
+        "description": "Define quantas vezes o alerta deve se repetir, caso seja passado ‘-1’ ou nenhum valor seja passado o alerta vai se repetir até que seja cancelado."
+    },
+    "APP | MODEL - stopAlertTimer": {
+        "prefix": "stopAlertTimer",
+        "body": "stopAlertTimer",
+        "description": "Finaliza o preocesso de alerta se ele estiver iniciado."
+    },
+    "APP | MODEL - starWait": {
+        "prefix": "starWait",
+        "body": "starWait",
+        "description": "Inicia do processo que mostra o progresso."
+    },
+    "APP | MODEL - stopWait": {
+        "prefix": "stopWait",
+        "body": "stopWait",
+        "description": "Finaliza o processo de progresso."
+    },
+    "APP | MODEL - stopWait after": {
+        "prefix": "stopWait after",
+        "body": "stopWait after",
+        "description": "Determina quanto tempo a instrução deve aguardar para executar."
+    },
+    "APP | MODEL - stop": {
+        "prefix": "stop",
+        "body": "stop",
+        "description": "Determina quanto tempo depois a instrução stopWait deve ser chamada automaticamente. (ex.: startWait stop=20s)."
+    },
+    "APP | MODEL - speech": {
+        "prefix": "speech",
+        "body": "speech",
+        "description": "Usada para falar algum texto no fluxo. (ex.: speech ola, speech @”ola mundo”, speech value=@”Ola”, speech value=value entity=_MARTE_TTS fieldToSearch=message_id messageField=message)."
+    },
+    "APP | MODEL - rowCount table=": {
+        "prefix": "rowCount table=",
+        "body": "rowCount table=",
+        "description": "(Ex: Integer count = rowCount table=Entidade)."
+    },
+    "APP | MODEL - select": {
+        "prefix": "select",
+        "body": "select",
+        "description": "(Ex: SELECT * FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - select count": {
+        "prefix": "select count",
+        "body": "select count",
+        "description": "Retorna a quantidade de registros que foram selecionados (Ex: SELECT COUNT FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - selectDistinctField": {
+        "prefix": "selectDistinctField",
+        "body": "selectDistinctField",
+        "description": "(Ex: selectDistinctField id FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - selectField": {
+        "prefix": "selectField",
+        "body": "selectField",
+        "description": "(Ex: selectField id FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - selectFirst": {
+        "prefix": "selectFirst",
+        "body": "selectFirst",
+        "description": "(Ex: selectFirst FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - selectLast": {
+        "prefix": "selectLast",
+        "body": "selectLast",
+        "description": "(Ex: selectLast FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - sumField": {
+        "prefix": "sumField",
+        "body": "sumField",
+        "description": "(Ex: Integer count = SumField campo FROM Entidade WHERE id == :campo)."
+    },
+    "APP | MODEL - update": {
+        "prefix": "update",
+        "body": "update",
+        "description": "(Ex: UPDATE Entidade SET campo = :campo1 WHERE id == :campo)."
+    },
+    "APP | MODEL - subStr": {
+        "prefix": "subStr",
+        "body": "subStr",
+        "description": "Retorna uma parte de um texto (Ex: valor = substr campo1Int campo2Int campo3Str)."
+    },
+    "APP | MODEL - strLen": {
+        "prefix": "strLen",
+        "body": "strLen",
+        "description": "Retorna a quantidade de caracteres de um texto (Ex: valor = strlen campoStr)."
+    },
+    "APP | MODEL - sync background": {
+        "prefix": "sync background",
+        "body": "sync background",
+        "description": "Efetua um sincronismo Background. Permite prosseguir caso esteja offline."
+    },
+    "APP | MODEL - sync noBack": {
+        "prefix": "sync noBack",
+        "body": "sync noBack",
+        "description": "Efetua um sincronismo Foreground. Permite prosseguir caso esteja offline."
+    },
+    "APP | MODEL - toast": {
+        "prefix": "toast",
+        "body": "toast",
+        "description": "Exibe mensagens rápidas e temporais no cabeçalho da tela."
+    },
+    "APP | MODEL - verifyemptyentity": {
+        "prefix": "verifyemptyentity",
+        "body": "verifyemptyentity",
+        "description": "Verifica se existe alguma entidade do tipo sync=in que esteja vazia. Não verifica entidade que contém o atributo emptyVerify=false."
+    },
+    "APP | MODEL - for": {
+        "prefix": "for",
+        "body": "for",
+        "description": "Usado para iterar sobre uma lista de registros. Sempre que é criado um for é adicionada uma variável cujo nome é o nome da variável de iteração do loop acrescido de ‘Idx’ e cujo valor é o índice de cada iteração do loop (Ex: for f in funcionarios)."
+    },
+    "APP | MODEL - roundFloat": {
+        "prefix": "roundFloat",
+        "body": "roundFloat",
+        "description": "Faz o arredondamento de um valor do tipo ponto flutuante deixando com o máximo de casas definidos. Sua implementação é uma manipulação matemática: multiplicação do número de casas estipulados em potência de base 10, em seguida divisão pelo mesmo valor, arredondando para o mais próximo (teto, não piso). (Ex: roundFloat valorfloat numero_casas_decimais, roundFloat value 3)."
+    },
+    "APP | MODEL - getUuid": {
+        "prefix": "getUuid",
+        "body": "getUuid",
+        "description": "retorna uma String representando o valor do device uuid"
+    },
+    "APP | MODEL - hasOfflineData": {
+        "prefix": "hasOfflineData",
+        "body": "hasOfflineData",
+        "description": "retorna um Boolean representando se há dados pendentes no aplicativo para enviar a web. Retorna True se houver dados a enviar e False se não tiver. Ele verifica nas tabelas de sync_out e nos dados recebidos via bluetooth (Ex: return hasOfflineData)."
+    },
+    "APP | MODEL - schedule": {
+        "prefix": "schedule",
+        "body": "schedule",
+        "description": "Agenda um conjunto de código para ser executado em um determinado período de tempo, podendo conter repetição ou não."
+    },
+    "APP | MODEL - schedule time=": {
+        "prefix": "schedule time=",
+        "body": "schedule time=",
+        "description": "determina a quantidade em milisegundos que a ação deverá ser executada a partir da hora atual. (Aceita o tempo no formato time=1h (s|m|h) digitado diretamente na instrução ou pode receber uma variável do tipo long que represente os millisegundos, uma variável do tipo String no mesmo formato dos valores que podem ser digitados diretamente ou um campo do tipo date) (Ex: schedule time=1m)."
+    },
+    "APP | MODEL - schedule hour=": {
+        "prefix": "schedule hour=",
+        "body": "schedule hour=",
+        "description": "determina um horário no formato HH:mm ou HH:mm:ss em que a ação deverá ocorrer, por padrão a ação é repetida sempre no mesmo horário todos os dias. (O valor pode ser digitado diretamente na instrução ou então pode ser recebido de uma variável)."
+    },
+    "APP | MODEL - schedule repeatIn=": {
+        "prefix": "schedule repeatIn=",
+        "body": "schedule repeatIn=",
+        "description": "determina a quantidade de tempo que a instrução deve aguardar para se repetir. (Aceita o tempo no formato time=1h (s|m|h) digitado diretamente na instrução ou pode receber uma variável do tipo long que represente os millisegundos ou então uma variável do tipo String no mesmo formato dos valores que podem ser digitados diretamente) (Ex: schedule time=20s repeatIn=3m)."
+    },
+    "APP | MODEL - cancelSchedule": {
+        "prefix": "cancelSchedule",
+        "body": "cancelSchedule",
+        "description": "Usado para cancelar uma ação previamente agendada usando a instrução schedule, caso não seja passada nenhuma valor para o atributo action todas as ações agendadas do fluxo são canceladas"
+    },
+    "APP | MODEL - cancelSchedule actions=": {
+        "prefix": "cancelSchedule actions=",
+        "body": "cancelSchedule actions=",
+        "description": "Atributo usado para definir quais ações do fluxo devem ser canceladas. Pode ser passado um record, uma lista de records ou uma lista de ids."
+    },
+    "APP | MODEL - isGpsEnabled": {
+        "prefix": "isGpsEnabled",
+        "body": "isGpsEnabled",
+        "description": "Retorna um boolean indicando se o GPS está ou não ativo"
+    },
+    "APP | MODEL - hasFixedPoint": {
+        "prefix": "hasFixedPoint",
+        "body": "hasFixedPoint",
+        "description": "Retorna um boolean indicando se existe ou não fixed point para o fluxo corrente"
+    },
+    "APP | MODEL - changeDrawerState": {
+        "prefix": "changeDrawerState",
+        "body": "changeDrawerState",
+        "description": "Permite alterar o estado do drawer. Exemplo: changeDrawerState open right, changeDrawerState close"
+    },
+    "APP | MODEL - cancelEvent": {
+        "prefix": "cancelEvent",
+        "body": "cancelEvent",
+        "description": "Permite cancelar a execução dos eventos OnMovimentStop e OnMovimentStart. Exemplo: cancelEvent OnMovimentStop."
+    },
+    "APP | MODEL - setStatusColor": {
+        "prefix": "setStatusColor",
+        "body": "setStatusColor",
+        "description": "Permite definir uma cor no formato RGB (#123456) para o fundo da imagem do capitão Simova que fica na barra de status. (Cores Padrões: green, orange, red, inactive, black, blue e grey) Exemplo: setStatusColor #001144, setStatusColor inactive. Pode ser usado o valor de um campo que contenha o valor da cor."
     }
 }
