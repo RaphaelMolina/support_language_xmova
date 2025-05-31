@@ -60,6 +60,6 @@
 ---
 ---
 ### Repositórios:
-[Produção](https://github.com/RaphaelMolina/support_language_xmova)
+[Produção](https://github.com/RaphaelMolina/support_language_xmova/tree/main)
 
-[Homologação](https://github.com/RaphaelMolina/xmova-language-homol)
+[Homologação](https://github.com/RaphaelMolina/support_language_xmova/tree/homol)

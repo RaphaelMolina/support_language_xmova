@@ -3,102 +3,102 @@
 	"name": "Xmova",
 	"scopeName": "source.xmv",
 	"patterns": [
-        {
-            "comment": "Azul Escuro - Comentário",
-            "name": "comment.line.double-slash",
-            "match": "//.*$"
-        },
-        {
-            "comment": "Amarelo - String",
-            "begin": "\"",
-            "end": "\"",
-            "name": "string.quoted.double",
+		{
+			"comment": "Azul Escuro - Comentário",
+			"name": "comment.line.double-slash",
+			"match": "//.*$"
+		},
+		{
+			"comment": "Amarelo - String",
+			"begin": "\"",
+			"end": "\"",
+			"name": "string.quoted.double",
 			"patterns": [
 				{
 					"name": "constant.character.escape",
 					"match": "\\\\."
 				}
 			]
-        },
-        {   
-            "comment": "Rosa - Palavras Chaves",
-            "name": "keyword",
-            "match": "\\b(appCode|alertTimer|darkTheme|dateOneScreen|diskMinSpaceMB|diskToleranceSpaceMB|retainLogFilesInDisk|multiLang|networkWait|networkTimeout|notResetWifi|offlineDate|simulateCorruptedSource|confirmDeviceDateHour|title|main|message|messageField|dateField|fromField|tableLayout|fullScreen|afterSync|afterUpdate|beforeUpdate|buffer|bluetooth|camera|clearOptionMenu|settingsOptionMenu|defaultFormat|getDeviceName|location|Location|logo|mainInfo|messageAlert|networkReset|onStart|OnStart|onExit|pictureAnytime|reader|support|syncOptionMenu|serverUrl|updateUrl|syncConfig|install|name|SEQ_DB_DEVICE_MASTER|SEQ_DB_DEVICE|Vars|Constants|InstallData|FieldLabel|EmptyVerify|notFill|notfill|notShowNo|ignoreExternal|autofill|notBack|notShowYes|inlineData|cleanupDays|server|cleanupDays|langcustom|timeTypeField|onlineFlagCreate|record|hide|maxLength|notSavedMessage|autoFillWhenOneItem|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|setAlertTimer|totalTime|numerickeyboard|notFormatThousand|memory|descriptionFields|searchFields|emptyVerify|favorite|autoInitializeNew|finishOnEndLoop|FinishOnEndLoop|hasFixedPoint|externalName|messageScheduled|notSync|defaultValue|viewAsColorIcon|toggleColorIcon|inactive|chave|confirm|noFinishAction|NoSyncAction|resetWifi|resetMobileData|simulateNoServer|maxLogFileSizeMB|airPlane|mobileevents|FixedKeyAppSys|FixedKeyAppName|FixedKeyAppVersion|FixedKeyAppUid|FixedKeyMsgInvalidValueOf|FixedKeyMsgInvalidValue|FixedKeyMsgInsertError|FixedKeyMsgUpdateWithOfflineData|FixedKeyMsgOnlineValidateError|FixedKeyMsgOnlineValidateFail|FixedKeySyncMessage|FixedKeySyncTitle|FixedKeyCommandOK|FixedKeyCommandBack|FixedKeyCommandCancel|FixedKeyCommandYes|FixedKeyCommandNo|FixedKeyCommandExit|FixedKeyCommandConfirm|FixedKeyCommandAdd|FixedKeyListDeleteAllSelectedMsg|FixedKeyDeleteConfirmMessage|FixedKeyListDeleteError|FixedKeyListActionDelete|FixedKeyListActionInsert|FixedKeyListInsertActionOK|FixedKeyListInsertActionCancel|FixedKeyListInsertRecordAlreadyExists|FixedKeyCrudOptionSync|FixedKeyCrudOptionFinish|FixedKeyFillConfirm|FixedKeyCrudCreateConfirmMessage|FixedKeyCrudFinishConfirmMessage|FixedKeyMsgEmptyList|FixedKeyMsgRecordSelector|FixedKeyMsgSavedData|FixedKeyMsgVerifyEmptyEntity|FixedKeyMsgAnd|FixedKeyMsgGoodMorning|FixedKeyMsgGoodAfternoon|FixedKeyMsgGoodEvening|FixedKeyBluetoothSenderCancelTexto|FixedKeyCrudViewControllerToastInputValue|FixedKeyPredefinedCodeExecutorLoadingMessage|FixedKeyXExceptionDaoException|FixedKeyXExceptionNoNetworkException|FixedKeyXExceptionSyncStatusFail|FixedKeyXExceptionCrudSaveException|FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate|FixedKeyXExceptionInputSysDateSmallerThanLastServerDate|FixedKeyXExceptionInvalidInputSysDate|FixedKeyServiceHttpConnectionWaitValidatingInformation|FixedKeyServiceHttpConnectionProcessingData|FixedKeyMessageSourceScreenMessageConfirm|FixedKeyMessageSourceScreenMessageConfirmOK|FixedKeyBluetoothReceiverViewControllerUpdateDeviceList|FixedKeyBluetoothReceiverViewControllerReceiveData|FixedKeyBluetoothReceiverViewControllerStop|FixedKeyBluetoothReceiverViewControllerDataReceivedFrom|FixedKeyBluetoothReceiverViewControllerReadingData|FixedKeyBluetoothReceiverViewControllerRegistersReceived|FixedKeyBluetoothReceiverViewControllerReceiving|FixedKeyBluetoothReceiverViewControllerFiles|FixedKeyBluetoothReceiverViewControllerFilesReceived|FixedKeyBluetoothReceiverViewControllerNoFilesToReceive|FixedKeyBluetoothReceiverViewControllerFailReceivingFiles|FixedKeyBluetoothReceiverViewControllerSearchingDevices|FixedKeyBluetoothReceiverViewControllerFailOnReceive|FixedKeyBluetoothReceiverViewControllerWaitProcessing|FixedKeyBluetoothReceiverViewControllerNotAbleToTurnOnBluetooth|FixedKeyBluetoothSenderViewControllerPasswordRestoreBackup|FixedKeyBluetoothSenderViewControllerNotAbleToTurnOnBluetooth|FixedKeyBluetoothSenderViewControllerWaitProcessing|FixedKeyBluetoothSenderViewControllerPasswordResendData|FixedKeyBluetoothSenderViewControllerPasswordOK|FixedKeyBluetoothSenderViewControllerPasswordCancel|FixedKeyBluetoothSenderViewControllerSendData|FixedKeyBluetoothSenderViewControllerSearchDeviceReceiver|FixedKeyBluetoothSenderViewControllerPasswordDoesntMatch|FixedKeyBluetoothSenderViewControllerPreparingDataToSendTo|FixedKeyBluetoothSenderViewControllerSendingDataTo|FixedKeyBluetoothSenderViewControllerWaitReceivingData|FixedKeyBluetoothSenderViewControllerDataSuccessfullySentTo|FixedKeyBluetoothSenderViewControllerErrorSendingDataWaitNewTry|FixedKeyCustomViewControllerBack|FixedKeyMainViewControllerNewVersionAvaiable|FixedKeyMainViewControllerNewVersion|FixedKeyOptionSelectorViewControllerCancel|FixedKeyOptionSelectorViewControllerExit|FixedKeyOptionSelectorViewControllerOK|FixedKeyRecordDetailViewControllerBack|FixedKeyRecordSelectorViewControllerSelectItemToRemove|FixedKeyRecordSelectorViewControllerWait|FixedKeyRecordsSelectorViewControllerSelectAll|FixedKeyRecordsSelectorViewControllerUnselectAll|FixedKeyRecordsSelectorViewControllerSelectAnyItem|FixedKeyTakePictureViewControllerSaving|FixedKeyTakePictureViewControllerPreparingCamera|FixedKeyTakePictureViewControllerCameraUnavaiable|FixedKeyUpdateViewControllerMsgDefaultError|FixedKeyUpdateViewControllerMsgUpdateWithSuccess|FixedKeyUpdateViewControllerNewVersion|FixedKeyUpdateViewControllerCannotUpdateCorruptedFile|FixedKeyUserDateTimeViewControllerFixDateHour|FixedKeyUserDateTimeViewControllerInvalidValue|FixedKeyUserDateTimeViewControllerOK|FixedKeyUserDateTimeViewControllerBack|FixedKeyUserDateTimeViewControllerAgain|FixedKeyUserDateTimeViewControllerExit|FixedKeyUserDateTimeViewControllerInsertYear|FixedKeyUserDateTimeViewControllerInsertMonth|FixedKeyUserDateTimeViewControllerInsertDay|FixedKeyUserDateTimeViewControllerInsertHour|FixedKeyUserDateTimeViewControllerInsertMinute|FixedKeyUserDateTimeViewControllerInsertTodayDate|FixedKeyUserDateTimeViewControllerInsertCurrentDate|FixedKeyUserDateTimeViewControllerDate|FixedKeyUserDateTimeViewControllerHour|FixedKeyUserDateTimeViewControllerConfirmDateHour|FixedKeyUserDateTimeViewControllerInvalidDateHour|FixedKeyHttpWaitConnectingWithServer|FixedKeyHttpConnecting|FixedKeyHttpWritingData|FixedKeyHttpReadingData|FixedKeyHttpProcessingData|FixedKeyAppSupport|FixedKeyAppErrorSendingSupportData|FixedKeyAppErrorSendingLog|FixedKeyAppErrorSendingBuffer|FixedKeyAppSupportDataSent|FixedKeyAppSetDateTime|FixedKeyAppSynchronism|FixedKeyAppCantExecuteFirstSynchronism|FixedKeyAppExit|FixedKeyAppReceiveDataByBluetooth|FixedKeyAppReceiveFilebyBluetooth|FixedKeyAppSendDataByBluetooth|FixedKeyAppResendDataByBluetooth|FixedKeyAppSendLogToSupport|FixedKeyAppTestNetwork|FixedKeyInputKeyboardDone|FixedKeyInputKeyboardBackspace|FixedKeyInstallAppDoneWithSuccess|FixedKeyAppAirPlain|FixedKeyWordOr|FixedKeyTypeSearch|FixedKeyHttpSendingData|FixedKeyHour|FixedKeyFilterNotFound|FixedKeyCommandContinue|FixedKeyPictureAnytime|FixedKeyPictureAnytimePictureTaked|FixedKeyPictureAnytimeCameraOrGallery|FixedKeyPictureAnytimeNoPhotosOnGallery|FixedKeyPictureAnytimeGalleryButton|FixedKeyPictureAnytimeCameraButton|FixedKeyDisplayablePassword|FixedKeyMsgWaitUi|FixedKeyUnableToInstallNewSourceOffLineData|FixedKeySelectSystem|FixedKeyChangeSource|FixedKeyInstallNewSource|FixedKeyDuplicatedSource|FixedInvalidPlatformVersionOnSource|FixedKeyUpdateWithIncompatiblePlatformVersion|FixedKeyUpdateCheckIncompatiblePlatformVersionFail|FixedKeyMainViewControllerSynchronize|FixedKeyClear|FixedKeyClearMessageConfirm|FixedKeyWaitingSync|FixedKeyLoadingSystem|FixedKeyCleaning|FixedKeyTypePassword|FixedKeyTorch|FixedKeyBarcodeReadCode|FixedKeyBarcodeValidatedCode|FixedKeyBarcodeDetailsValidFormat|FixedKeyBarcodeDetailsInvalidFormat|FixedKeyBarcodeDetailsIsLastCode|FixedKeyWordServer|FixedKeyWordDevice|FixedKeyWordManual|FixedKeyMsgUpdateIncompatibleError|FixedKeyMsgUpdateWithFixedPoint|FixedKeyWeekDaySunday|FixedKeyWeekDayMonday|FixedKeyWeekDayTuesday|FixedKeyWeekDayWednesday|FixedKeyWeekDayThursday|FixedKeyWeekDayFriday|FixedKeyWeekDaySaturday|FixedKeyLabelMainPendingRecords|FixedKeyLabelLastSuccessCommunication|FixedKeyLabelLastAttemptCommunication|FixedKeyLabelMainCommunicating|FixedKeyLabelMainAllRecordsSent|FixedKeyLabelMainRecordNotSentSingular|FixedKeyLabelMainRecordNotSentPlural|FixedKeyLabelMainInstallCode|FixedKeyLabelMainPhoneNumber|FixedKeyInputKeyboardDecimalSymbol|FixedKeyNoNetworkSynchronizeFail|FixedKeySyncAgain|FixedKeyInsertAppCode|FixedKeyCodeMustHaveAtLeastTwoDigits|FixedKeyCouldntDownloadAppFileCorrupted|FixedKeyMainActivitySubMenuOptions|FixedKeyHttpWritingEntity|FixedKeyConnectionAnalysisPasswordDoesntMatch|FixedKeyMsgWait|FixedKeyMsgScheduledMessage|FixedKeyMsgScheduledTitle|FixedKeyMsgScheduledHour|FixedKeyBluetoothReceiverViewControllerConnecting|FixedKeyBluetoothReceiverViewControllerConnected|FixedKeyUserDateTimeViewControllerConfirmDeviceDateHour|FixedKeyMsgUpdateWithBeforeUpdateEvent|FixedKeyCloseApplicationMessage|FixedKeyNanoServerTitle|FixedKeyNanoServerTurnOn|FixedKeyNanoServerTurnOff|FixedKeyNanoServerDataCollected|FixedKeyHardwareLogTitle|FixedKeyNanoIPTitle|FixedKeyNanoSendedData|FixedKeyGpsDisabledMessage|FixedKeyNetworkTestQuestion|FixedKeyAudioRecordToRecord|FixedKeyAudioRecordToStop|FixedKeyAudioRecordToPlay|FixedKeyAudioToastWait|FixedKeyAudioBusyMessage|FixedKeySocketMessageTitle|FixedKeySocketMessageTextDialogEmpty|FixedKeySocketMessageOkButton|FixedKeySocketMessageStopButton|FixedKeyAppXid|FixedKeyDrawSave|FixedKeyDrawClear|FixedKeyDrawSelectColorTitle|FixedKeyDrawSelectColorAction|FixedKeyPictureMarkerCameraOK|FixedKeyPictureMarkerCameraCancel|FixedKeyPictureMarkerDrawSave|FixedKeyPictureMarkerDrawClear|FixedKeyPictureMarkerDrawSelectColorTitle|FixedKeyPictureMarkerDrawSelectColorAction|FixedKeyPictureMarkerCaptureAgain|SyncBackgroundOnFinishRecord|_Favorite|_SyncOut|_FixedPoint|_Deleted|AppEntityVer|bluetoothKeepRecordsWhenNewRecordsIsEmpty|noSyncAction|openFinish|recursive|mask|fillConfirm|fixedPoint|bluetoothFile|sendFields|NotShowNo|fullDescription|ignoreWhenListIsEmpty|inUpper|getManyRecords|notRequired|useAsFilter|fullColorIconList|internalStatus|numericKeyboard|disableContinueButtonOnColorIcon|disableColorIcon|enableColorIcon|replaceall|matches|isBetweenDates|include|isOnline|msg|percentage|printEntity|restart|simpledateformat|hoursformat|starWait|stopWait|stop|speech|isGpsEnabled|changeDrawerState|cancelEvent|table|count|noBack|hour|repeatIn)\\b"
-        },
-        {
-            "comment": "Rosa Negrito - Palavras Chaves Valores",
-            "name": "keyword.operator.new",
-            "match": "\\b(timerInterval|Device|Manual|syncInterve|fillAuth|Finish|Create)\\b"
-        },
-        {
-            "comment": "Rosa - Condicionais",
-            "name": "keyword.control",
-            "match": "\\b(if|else|for|while|return|in)\\b"
-        },
-        {
-            "comment": "Rosa - Palavras Chaves com antecessor",
-            "name": "keyword.other",
-            "match": "\\BUnselecteds\\b|\\BUnselectedRecords\\b|\\BSelecteds\\b"
-        },
-        {
-            "comment": "Verde - Palavras Chaves",
-            "name": "entity.other.attribute-name",
-            "match": "\\b(views|events|actions|getRecord|fontssize|titlefontssize|button|label|style|primary|margins|onClick|default|success|warning|info|danger|beforeInit|beforeClose|aligments|loadUrl|postVars|post|onHttpError|recordList|recordDetail|onValidate|fieldEvents|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|filterListRecord|getInputScreenLabel|screens|isVisible|fill|BeforeSyncFirstRecord|beforeSyncSave|crudActions|onShowScheduledMessage|actionLabel|options|getInputTopMessageLabel|clearOnValidationFail|continueOnError|continueOnFail|goToFieldOnValidateStatus|afterSyncSave|beforeInsert|beforeDelete|beforeSync|onInsertAlreadyExists|onItemClick|onCrudOptionsBack|OnShowScheduledMessage|onGetDefaultInputValue|webView)\\b"
-        },
-        {
-            "comment": "Verde - Palavras Chaves Lang",
-            "name": "entity.name.function",
-            "match": "\\b(EntityLabel|CrudOptionsActionLabel|CrudCreateConfirmMessage|ScreenActionLabel)\\b"
-        },
-        {
-            "comment": "Laranja - Palavras Chaves",
-            "name": "markup.changed",
-            "match": "\\b(maxFileSizeMB|maxFilesToKeep|saveBinary|sender|receiver|fileReceiver|password|restorePassword|maxBackupDays|quality|resolution|format|minTime|minDistance|minLastTime|tracking|onInsert|phoneNumber|hidePendingRecords|soundLoop|vibrateTime|vibrationLoop|sound|none|BarcodeError|AlertTimer|BarcodeRead|camera|minQuality|types|sizes|type|required|minBearing|syncInterval|waitForNetworkTimeout|connectionTimeout|readTimeout|httpStatusCode|originalCode|fields|labels|Back|sync|exit|ok|Ok|getRecords|inputEntity|listRecord|lang|onGetItemIconColor|OnGetItemBackgroundColor|stopAlertTimer|stopSound|cancelSchedule|save|setStatusColor|concat|SumField|toast|select|from|UPDATE|SET|set|INSERT|INTO|VALUES|COUNT|CONCAT|DELETE|SelectFirst|FROM|From|Where|WHERE|where|selectFirst|AND|and|dateToMilli|vars|simpleDateFormat|background|actionbarsubtitle|actionBarSubtitle|playSound|yesLabel|noLabel|timeout|timeoutExceededValue|backOnlyAfterNo|CrudBack|crud|setInfoView|dropTable|schedule|time|finishRecord|addDate|Select|maxCacheTime|minSpeed|show|periodicSync|SelectLast|entity|Speech|delete|insert|insertFields|insertFieldNotFillId|Sync|rowCount|disableNotifyMessage|disableGpsRestartOnResume|selectDistinctField|selectField|selectLast|sumField|update|saveSyncOut|syncOutOnly|goToField|clear|cryptography|wait|after|snooze|repeat)\\b"
-        },
-        {
-            "comment": "Azul Claro - Tipo de Dados com espaço",
-            "name": "support.other",
-            "match": "Decimal\\s+manualDecimal"
-        },
-        {
-            "comment": "Azul Claro - Tipo de Dados",
-            "name": "support",
-            "match": "\\b(path|double|date|Batterylevel|Binary|boolean|Boolean|Bool|Bytes|Date|Decimal|Double|Entity|Float|inc|Integer|int|List|list|Location|Long|long|Now|now|ReceivedFile|string|String|Str|Text|text|picture|decimal|draw|audiorecord|picturemarker|onlydate|onlytime|decimalSize)\\b"
-        },
-        {
-            "comment": "Laranja Negrito - Valores",
-            "name": "markup.bold",
-            "match": "\\b(PARTIAL|EAN8|UPCE|ISBN10|UPCA|EAN13|ISBN13|I25|DATABAR|DATABAR_EXP|CODABAR|CODE39|PDF417|QRCODE|CODE93|CODE128|manualDecimal|logo_simova|LEFT|CENTER|RIGHT|verifyEmptyEntity|out|currentDate|generateuuid|custom|cam|BarcodeBeep|beforeInstall|nfc|bt|backgroundIn|Background|Foreground|getGCMIdentifier|currentDateType|currentDateTypeIsValid|getYear|getMonth|getDay|getWeekDay|getHour|getMinutes|getSeconds|difDateMilli|getYearWeek|milliToDate|formatDateMilli|subStr|strLen|verifyemptyentity|roundFloat|getUuid|hasOfflineData)\\b"
-        },
-        {
-            "comment": "Azul Claro - Números",
-            "name": "markup.underline.link",
-            "match": "\\b\\d+\\b"
-        },
-        {
-            "comment": "Azul Claro - Palavras Chaves Lang",
-            "name": "support.function.git-rebase",
-            "match": "\\b(FieldOnlineValidateFail|FieldOnlineValidateError|BooleanInputScreenYesActionLabel|BooleanInputScreenNoActionLabel|BooleanInputScreenBackActionLabel)\\b"
-        },
-        {
-            "comment": "Roxo - Log e Valores",
-            "name": "support.constant",
-            "match": "\\b(log|true|false|null|NULL)\\b"
-        },
-        {
-            "comment": "Roxo - Variável Global",
-            "name": "variable.language",
-            "match": "\\b([_][A-Za-z]*)\\b"
-        },
-        {
-            "comment": "Roxo - Entidades",
-            "name": "markup.heading",
-            "match": "\\b[A-Z]\\w*\\b"
-        },
-        {   
-            "comment": "Vermelho - Caracteres Especiais",
-            "name": "markup.deleted",
-            "match": "[^a-zA-Z0-9À-Üà-ü]|\\[|\\]|\\(|\\)|{|}"
-        }
-    ]
+		},
+		{
+			"comment": "Rosa - Palavras Chaves",
+			"name": "keyword",
+			"match": "\\b(appCode|alertTimer|darkTheme|dateOneScreen|diskMinSpaceMB|diskToleranceSpaceMB|retainLogFilesInDisk|multiLang|networkWait|networkTimeout|notResetWifi|offlineDate|simulateCorruptedSource|confirmDeviceDateHour|title|main|message|messageField|dateField|fromField|tableLayout|fullScreen|afterSync|afterUpdate|beforeUpdate|buffer|bluetooth|camera|clearOptionMenu|settingsOptionMenu|defaultFormat|getDeviceName|location|Location|logo|mainInfo|messageAlert|networkReset|onStart|OnStart|onExit|pictureAnytime|reader|support|syncOptionMenu|serverUrl|updateUrl|syncConfig|install|name|SEQ_DB_DEVICE_MASTER|SEQ_DB_DEVICE|Vars|Constants|InstallData|FieldLabel|EmptyVerify|notFill|notfill|notShowNo|ignoreExternal|autofill|notBack|notShowYes|inlineData|cleanupDays|server|cleanupDays|langcustom|timeTypeField|onlineFlagCreate|record|hide|maxLength|notSavedMessage|autoFillWhenOneItem|uuid|loop|acceptEmpty|notUseAsFilter|transient|add|onlineFlagFinish|setAlertTimer|totalTime|numerickeyboard|notFormatThousand|memory|descriptionFields|searchFields|emptyVerify|favorite|autoInitializeNew|finishOnEndLoop|FinishOnEndLoop|hasFixedPoint|externalName|messageScheduled|notSync|defaultValue|viewAsColorIcon|toggleColorIcon|inactive|chave|confirm|noFinishAction|NoSyncAction|resetWifi|resetMobileData|simulateNoServer|maxLogFileSizeMB|airPlane|mobileevents|FixedKeyAppSys|FixedKeyAppName|FixedKeyAppVersion|FixedKeyAppUid|FixedKeyMsgInvalidValueOf|FixedKeyMsgInvalidValue|FixedKeyMsgInsertError|FixedKeyMsgUpdateWithOfflineData|FixedKeyMsgOnlineValidateError|FixedKeyMsgOnlineValidateFail|FixedKeySyncMessage|FixedKeySyncTitle|FixedKeyCommandOK|FixedKeyCommandBack|FixedKeyCommandCancel|FixedKeyCommandYes|FixedKeyCommandNo|FixedKeyCommandExit|FixedKeyCommandConfirm|FixedKeyCommandAdd|FixedKeyListDeleteAllSelectedMsg|FixedKeyDeleteConfirmMessage|FixedKeyListDeleteError|FixedKeyListActionDelete|FixedKeyListActionInsert|FixedKeyListInsertActionOK|FixedKeyListInsertActionCancel|FixedKeyListInsertRecordAlreadyExists|FixedKeyCrudOptionSync|FixedKeyCrudOptionFinish|FixedKeyFillConfirm|FixedKeyCrudCreateConfirmMessage|FixedKeyCrudFinishConfirmMessage|FixedKeyMsgEmptyList|FixedKeyMsgRecordSelector|FixedKeyMsgSavedData|FixedKeyMsgVerifyEmptyEntity|FixedKeyMsgAnd|FixedKeyMsgGoodMorning|FixedKeyMsgGoodAfternoon|FixedKeyMsgGoodEvening|FixedKeyBluetoothSenderCancelTexto|FixedKeyCrudViewControllerToastInputValue|FixedKeyPredefinedCodeExecutorLoadingMessage|FixedKeyXExceptionDaoException|FixedKeyXExceptionNoNetworkException|FixedKeyXExceptionSyncStatusFail|FixedKeyXExceptionCrudSaveException|FixedKeyXExceptionInputSysDateBiggerThanXDaysAfterLastServerDate|FixedKeyXExceptionInputSysDateSmallerThanLastServerDate|FixedKeyXExceptionInvalidInputSysDate|FixedKeyServiceHttpConnectionWaitValidatingInformation|FixedKeyServiceHttpConnectionProcessingData|FixedKeyMessageSourceScreenMessageConfirm|FixedKeyMessageSourceScreenMessageConfirmOK|FixedKeyBluetoothReceiverViewControllerUpdateDeviceList|FixedKeyBluetoothReceiverViewControllerReceiveData|FixedKeyBluetoothReceiverViewControllerStop|FixedKeyBluetoothReceiverViewControllerDataReceivedFrom|FixedKeyBluetoothReceiverViewControllerReadingData|FixedKeyBluetoothReceiverViewControllerRegistersReceived|FixedKeyBluetoothReceiverViewControllerReceiving|FixedKeyBluetoothReceiverViewControllerFiles|FixedKeyBluetoothReceiverViewControllerFilesReceived|FixedKeyBluetoothReceiverViewControllerNoFilesToReceive|FixedKeyBluetoothReceiverViewControllerFailReceivingFiles|FixedKeyBluetoothReceiverViewControllerSearchingDevices|FixedKeyBluetoothReceiverViewControllerFailOnReceive|FixedKeyBluetoothReceiverViewControllerWaitProcessing|FixedKeyBluetoothReceiverViewControllerNotAbleToTurnOnBluetooth|FixedKeyBluetoothSenderViewControllerPasswordRestoreBackup|FixedKeyBluetoothSenderViewControllerNotAbleToTurnOnBluetooth|FixedKeyBluetoothSenderViewControllerWaitProcessing|FixedKeyBluetoothSenderViewControllerPasswordResendData|FixedKeyBluetoothSenderViewControllerPasswordOK|FixedKeyBluetoothSenderViewControllerPasswordCancel|FixedKeyBluetoothSenderViewControllerSendData|FixedKeyBluetoothSenderViewControllerSearchDeviceReceiver|FixedKeyBluetoothSenderViewControllerPasswordDoesntMatch|FixedKeyBluetoothSenderViewControllerPreparingDataToSendTo|FixedKeyBluetoothSenderViewControllerSendingDataTo|FixedKeyBluetoothSenderViewControllerWaitReceivingData|FixedKeyBluetoothSenderViewControllerDataSuccessfullySentTo|FixedKeyBluetoothSenderViewControllerErrorSendingDataWaitNewTry|FixedKeyCustomViewControllerBack|FixedKeyMainViewControllerNewVersionAvaiable|FixedKeyMainViewControllerNewVersion|FixedKeyOptionSelectorViewControllerCancel|FixedKeyOptionSelectorViewControllerExit|FixedKeyOptionSelectorViewControllerOK|FixedKeyRecordDetailViewControllerBack|FixedKeyRecordSelectorViewControllerSelectItemToRemove|FixedKeyRecordSelectorViewControllerWait|FixedKeyRecordsSelectorViewControllerSelectAll|FixedKeyRecordsSelectorViewControllerUnselectAll|FixedKeyRecordsSelectorViewControllerSelectAnyItem|FixedKeyTakePictureViewControllerSaving|FixedKeyTakePictureViewControllerPreparingCamera|FixedKeyTakePictureViewControllerCameraUnavaiable|FixedKeyUpdateViewControllerMsgDefaultError|FixedKeyUpdateViewControllerMsgUpdateWithSuccess|FixedKeyUpdateViewControllerNewVersion|FixedKeyUpdateViewControllerCannotUpdateCorruptedFile|FixedKeyUserDateTimeViewControllerFixDateHour|FixedKeyUserDateTimeViewControllerInvalidValue|FixedKeyUserDateTimeViewControllerOK|FixedKeyUserDateTimeViewControllerBack|FixedKeyUserDateTimeViewControllerAgain|FixedKeyUserDateTimeViewControllerExit|FixedKeyUserDateTimeViewControllerInsertYear|FixedKeyUserDateTimeViewControllerInsertMonth|FixedKeyUserDateTimeViewControllerInsertDay|FixedKeyUserDateTimeViewControllerInsertHour|FixedKeyUserDateTimeViewControllerInsertMinute|FixedKeyUserDateTimeViewControllerInsertTodayDate|FixedKeyUserDateTimeViewControllerInsertCurrentDate|FixedKeyUserDateTimeViewControllerDate|FixedKeyUserDateTimeViewControllerHour|FixedKeyUserDateTimeViewControllerConfirmDateHour|FixedKeyUserDateTimeViewControllerInvalidDateHour|FixedKeyHttpWaitConnectingWithServer|FixedKeyHttpConnecting|FixedKeyHttpWritingData|FixedKeyHttpReadingData|FixedKeyHttpProcessingData|FixedKeyAppSupport|FixedKeyAppErrorSendingSupportData|FixedKeyAppErrorSendingLog|FixedKeyAppErrorSendingBuffer|FixedKeyAppSupportDataSent|FixedKeyAppSetDateTime|FixedKeyAppSynchronism|FixedKeyAppCantExecuteFirstSynchronism|FixedKeyAppExit|FixedKeyAppReceiveDataByBluetooth|FixedKeyAppReceiveFilebyBluetooth|FixedKeyAppSendDataByBluetooth|FixedKeyAppResendDataByBluetooth|FixedKeyAppSendLogToSupport|FixedKeyAppTestNetwork|FixedKeyInputKeyboardDone|FixedKeyInputKeyboardBackspace|FixedKeyInstallAppDoneWithSuccess|FixedKeyAppAirPlain|FixedKeyWordOr|FixedKeyTypeSearch|FixedKeyHttpSendingData|FixedKeyHour|FixedKeyFilterNotFound|FixedKeyCommandContinue|FixedKeyPictureAnytime|FixedKeyPictureAnytimePictureTaked|FixedKeyPictureAnytimeCameraOrGallery|FixedKeyPictureAnytimeNoPhotosOnGallery|FixedKeyPictureAnytimeGalleryButton|FixedKeyPictureAnytimeCameraButton|FixedKeyDisplayablePassword|FixedKeyMsgWaitUi|FixedKeyUnableToInstallNewSourceOffLineData|FixedKeySelectSystem|FixedKeyChangeSource|FixedKeyInstallNewSource|FixedKeyDuplicatedSource|FixedInvalidPlatformVersionOnSource|FixedKeyUpdateWithIncompatiblePlatformVersion|FixedKeyUpdateCheckIncompatiblePlatformVersionFail|FixedKeyMainViewControllerSynchronize|FixedKeyClear|FixedKeyClearMessageConfirm|FixedKeyWaitingSync|FixedKeyLoadingSystem|FixedKeyCleaning|FixedKeyTypePassword|FixedKeyTorch|FixedKeyBarcodeReadCode|FixedKeyBarcodeValidatedCode|FixedKeyBarcodeDetailsValidFormat|FixedKeyBarcodeDetailsInvalidFormat|FixedKeyBarcodeDetailsIsLastCode|FixedKeyWordServer|FixedKeyWordDevice|FixedKeyWordManual|FixedKeyMsgUpdateIncompatibleError|FixedKeyMsgUpdateWithFixedPoint|FixedKeyWeekDaySunday|FixedKeyWeekDayMonday|FixedKeyWeekDayTuesday|FixedKeyWeekDayWednesday|FixedKeyWeekDayThursday|FixedKeyWeekDayFriday|FixedKeyWeekDaySaturday|FixedKeyLabelMainPendingRecords|FixedKeyLabelLastSuccessCommunication|FixedKeyLabelLastAttemptCommunication|FixedKeyLabelMainCommunicating|FixedKeyLabelMainAllRecordsSent|FixedKeyLabelMainRecordNotSentSingular|FixedKeyLabelMainRecordNotSentPlural|FixedKeyLabelMainInstallCode|FixedKeyLabelMainPhoneNumber|FixedKeyInputKeyboardDecimalSymbol|FixedKeyNoNetworkSynchronizeFail|FixedKeySyncAgain|FixedKeyInsertAppCode|FixedKeyCodeMustHaveAtLeastTwoDigits|FixedKeyCouldntDownloadAppFileCorrupted|FixedKeyMainActivitySubMenuOptions|FixedKeyHttpWritingEntity|FixedKeyConnectionAnalysisPasswordDoesntMatch|FixedKeyMsgWait|FixedKeyMsgScheduledMessage|FixedKeyMsgScheduledTitle|FixedKeyMsgScheduledHour|FixedKeyBluetoothReceiverViewControllerConnecting|FixedKeyBluetoothReceiverViewControllerConnected|FixedKeyUserDateTimeViewControllerConfirmDeviceDateHour|FixedKeyMsgUpdateWithBeforeUpdateEvent|FixedKeyCloseApplicationMessage|FixedKeyNanoServerTitle|FixedKeyNanoServerTurnOn|FixedKeyNanoServerTurnOff|FixedKeyNanoServerDataCollected|FixedKeyHardwareLogTitle|FixedKeyNanoIPTitle|FixedKeyNanoSendedData|FixedKeyGpsDisabledMessage|FixedKeyNetworkTestQuestion|FixedKeyAudioRecordToRecord|FixedKeyAudioRecordToStop|FixedKeyAudioRecordToPlay|FixedKeyAudioToastWait|FixedKeyAudioBusyMessage|FixedKeySocketMessageTitle|FixedKeySocketMessageTextDialogEmpty|FixedKeySocketMessageOkButton|FixedKeySocketMessageStopButton|FixedKeyAppXid|FixedKeyDrawSave|FixedKeyDrawClear|FixedKeyDrawSelectColorTitle|FixedKeyDrawSelectColorAction|FixedKeyPictureMarkerCameraOK|FixedKeyPictureMarkerCameraCancel|FixedKeyPictureMarkerDrawSave|FixedKeyPictureMarkerDrawClear|FixedKeyPictureMarkerDrawSelectColorTitle|FixedKeyPictureMarkerDrawSelectColorAction|FixedKeyPictureMarkerCaptureAgain|SyncBackgroundOnFinishRecord|_Favorite|_SyncOut|_FixedPoint|_Deleted|AppEntityVer|bluetoothKeepRecordsWhenNewRecordsIsEmpty|noSyncAction|openFinish|recursive|mask|fillConfirm|fixedPoint|bluetoothFile|sendFields|NotShowNo|fullDescription|ignoreWhenListIsEmpty|inUpper|getManyRecords|notRequired|useAsFilter|fullColorIconList|internalStatus|numericKeyboard|disableContinueButtonOnColorIcon|disableColorIcon|enableColorIcon|replaceall|matches|isBetweenDates|include|isOnline|msg|percentage|printEntity|restart|simpledateformat|hoursformat|starWait|stopWait|stop|speech|isGpsEnabled|changeDrawerState|cancelEvent|table|count|noBack|hour|repeatIn)\\b"
+		},
+		{
+			"comment": "Rosa Negrito - Palavras Chaves Valores",
+			"name": "keyword.operator.new",
+			"match": "\\b(timerInterval|Device|Manual|syncInterve|fillAuth|Finish|Create)\\b"
+		},
+		{
+			"comment": "Rosa - Condicionais",
+			"name": "keyword.control",
+			"match": "\\b(if|else|for|while|return|in)\\b"
+		},
+		{
+			"comment": "Rosa - Palavras Chaves com antecessor",
+			"name": "keyword.other",
+			"match": "\\BUnselecteds\\b|\\BUnselectedRecords\\b|\\BSelecteds\\b"
+		},
+		{
+			"comment": "Verde - Palavras Chaves",
+			"name": "entity.other.attribute-name",
+			"match": "\\b(views|events|actions|getRecord|fontssize|titlefontssize|button|label|style|primary|margins|onClick|default|success|warning|info|danger|beforeInit|beforeClose|aligments|loadUrl|postVars|post|onHttpError|recordList|recordDetail|onValidate|fieldEvents|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|filterListRecord|getInputScreenLabel|screens|isVisible|fill|BeforeSyncFirstRecord|beforeSyncSave|crudActions|onShowScheduledMessage|actionLabel|options|getInputTopMessageLabel|clearOnValidationFail|continueOnError|continueOnFail|goToFieldOnValidateStatus|afterSyncSave|beforeInsert|beforeDelete|beforeSync|onInsertAlreadyExists|onItemClick|onCrudOptionsBack|OnShowScheduledMessage|onGetDefaultInputValue|webView)\\b"
+		},
+		{
+			"comment": "Verde - Palavras Chaves Lang",
+			"name": "entity.name.function",
+			"match": "\\b(EntityLabel|CrudOptionsActionLabel|CrudCreateConfirmMessage|ScreenActionLabel)\\b"
+		},
+		{
+			"comment": "Laranja - Palavras Chaves",
+			"name": "markup.changed",
+			"match": "\\b(maxFileSizeMB|maxFilesToKeep|saveBinary|sender|receiver|fileReceiver|password|restorePassword|maxBackupDays|quality|resolution|format|minTime|minDistance|minLastTime|tracking|onInsert|phoneNumber|hidePendingRecords|soundLoop|vibrateTime|vibrationLoop|sound|none|BarcodeError|AlertTimer|BarcodeRead|camera|minQuality|types|sizes|type|required|minBearing|syncInterval|waitForNetworkTimeout|connectionTimeout|readTimeout|httpStatusCode|originalCode|fields|labels|Back|sync|exit|ok|Ok|getRecords|inputEntity|listRecord|lang|onGetItemIconColor|OnGetItemBackgroundColor|stopAlertTimer|stopSound|cancelSchedule|save|setStatusColor|concat|SumField|toast|select|from|UPDATE|SET|set|INSERT|INTO|VALUES|COUNT|CONCAT|DELETE|SelectFirst|FROM|From|Where|WHERE|where|selectFirst|AND|and|dateToMilli|vars|simpleDateFormat|background|actionbarsubtitle|actionBarSubtitle|playSound|yesLabel|noLabel|timeout|timeoutExceededValue|backOnlyAfterNo|CrudBack|crud|setInfoView|dropTable|schedule|time|finishRecord|addDate|Select|maxCacheTime|minSpeed|show|periodicSync|SelectLast|entity|Speech|delete|insert|insertFields|insertFieldNotFillId|Sync|rowCount|disableNotifyMessage|disableGpsRestartOnResume|selectDistinctField|selectField|selectLast|sumField|update|saveSyncOut|syncOutOnly|goToField|clear|cryptography|wait|after|snooze|repeat)\\b"
+		},
+		{
+			"comment": "Azul Claro - Tipo de Dados com espaço",
+			"name": "support.other",
+			"match": "Decimal\\s+manualDecimal"
+		},
+		{
+			"comment": "Azul Claro - Tipo de Dados",
+			"name": "support",
+			"match": "\\b(path|double|date|Batterylevel|Binary|boolean|Boolean|Bool|Bytes|Date|Decimal|Double|Entity|Float|inc|Integer|int|List|list|Location|Long|long|Now|now|ReceivedFile|string|String|Str|Text|text|picture|decimal|draw|audiorecord|picturemarker|onlydate|onlytime|decimalSize)\\b"
+		},
+		{
+			"comment": "Laranja Negrito - Valores",
+			"name": "markup.bold",
+			"match": "\\b(PARTIAL|EAN8|UPCE|ISBN10|UPCA|EAN13|ISBN13|I25|DATABAR|DATABAR_EXP|CODABAR|CODE39|PDF417|QRCODE|CODE93|CODE128|manualDecimal|logo_simova|LEFT|CENTER|RIGHT|verifyEmptyEntity|out|currentDate|generateuuid|custom|cam|BarcodeBeep|beforeInstall|nfc|bt|backgroundIn|Background|Foreground|getGCMIdentifier|currentDateType|currentDateTypeIsValid|getYear|getMonth|getDay|getWeekDay|getHour|getMinutes|getSeconds|difDateMilli|getYearWeek|milliToDate|formatDateMilli|subStr|strLen|verifyemptyentity|roundFloat|getUuid|hasOfflineData)\\b"
+		},
+		{
+			"comment": "Azul Claro - Números",
+			"name": "markup.underline.link",
+			"match": "\\b\\d+\\b"
+		},
+		{
+			"comment": "Azul Claro - Palavras Chaves Lang",
+			"name": "support.function.git-rebase",
+			"match": "\\b(FieldOnlineValidateFail|FieldOnlineValidateError|BooleanInputScreenYesActionLabel|BooleanInputScreenNoActionLabel|BooleanInputScreenBackActionLabel)\\b"
+		},
+		{
+			"comment": "Roxo - Log e Valores",
+			"name": "support.constant",
+			"match": "\\b(log|true|false|null|NULL)\\b"
+		},
+		{
+			"comment": "Roxo - Variável Global",
+			"name": "variable.language",
+			"match": "\\b([_][A-Za-z]*)\\b"
+		},
+		{
+			"comment": "Roxo - Entidades",
+			"name": "markup.heading",
+			"match": "\\b[A-Z][a-z]\\w*\\b|\\b_[A-Z][_A-Z0-9]*\\b"
+		},
+		{
+			"comment": "Vermelho - Caracteres Especiais",
+			"name": "markup.deleted",
+			"match": "[^a-zA-Z0-9À-Üà-ü]|\\[|\\]|\\(|\\)|{|}|(?<=@)[a-zA-Z]"
+		}
+	]
 }
