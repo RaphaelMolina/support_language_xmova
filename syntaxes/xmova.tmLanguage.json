@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"$schema": "../schemas/tmlanguage.json",
 	"name": "Xmova",
 	"scopeName": "source.xmv",
 	"patterns": [
@@ -43,7 +43,7 @@
 		{
 			"comment": "Verde - Palavras Chaves",
 			"name": "entity.other.attribute-name",
-			"match": "\\b(views|events|actions|getRecord|fontssize|titlefontssize|button|label|style|primary|margins|onClick|default|success|warning|info|danger|beforeInit|beforeClose|aligments|loadUrl|postVars|post|onHttpError|recordList|recordDetail|onValidate|fieldEvents|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|autofill|filterListRecord|getInputScreenLabel|screens|isVisible|fill|BeforeSyncFirstRecord|beforeSyncSave|crudActions|onShowScheduledMessage|actionLabel|options|getInputTopMessageLabel|clearOnValidationFail|continueOnError|continueOnFail|goToFieldOnValidateStatus|afterSyncSave|beforeInsert|beforeDelete|beforeSync|onInsertAlreadyExists|onItemClick|onCrudOptionsBack|OnShowScheduledMessage|onGetDefaultInputValue|webView|beforeBack)\\b"
+			"match": "\\b(views|events|actions|getRecord|fontssize|titlefontssize|button|label|style|primary|margins|onClick|default|success|warning|info|danger|beforeInit|beforeClose|aligments|loadUrl|postVars|post|onHttpError|recordList|recordDetail|onValidate|fieldEvents|beforeFinish|afterFinish|afterFill|onlineValidate|fillCondition|afterInsert|autoFill|autofill|filterListRecord|getInputScreenLabel|screens|isVisible|fill|BeforeSyncFirstRecord|beforeSyncSave|crudActions|onShowScheduledMessage|actionLabel|options|getInputTopMessageLabel|clearOnValidationFail|continueOnError|continueOnFail|goToFieldOnValidateStatus|afterSyncSave|beforeInsert|beforeDelete|beforeSync|onInsertAlreadyExists|onCrudOptionsBack|OnShowScheduledMessage|onGetDefaultInputValue|webView|beforeBack)\\b"
 		},
 		{
 			"comment": "Verde - Palavras Chaves Lang",
@@ -53,7 +53,7 @@
 		{
 			"comment": "Laranja - Palavras Chaves",
 			"name": "markup.changed",
-			"match": "\\b(maxFileSizeMB|maxFilesToKeep|saveBinary|sender|receiver|fileReceiver|password|restorePassword|maxBackupDays|quality|resolution|format|minTime|minDistance|minLastTime|tracking|onInsert|phoneNumber|hidePendingRecords|soundLoop|vibrateTime|vibrationLoop|sound|none|BarcodeError|AlertTimer|BarcodeRead|camera|minQuality|types|sizes|type|required|minBearing|syncInterval|waitForNetworkTimeout|connectionTimeout|readTimeout|httpStatusCode|originalCode|fields|labels|Back|sync|exit|ok|Ok|getRecords|inputEntity|listRecord|lang|onGetItemIconColor|OnGetItemBackgroundColor|stopAlertTimer|stopSound|cancelSchedule|save|setStatusColor|concat|SumField|toast|select|from|UPDATE|SET|set|INSERT|Insert|INTO|VALUES|COUNT|CONCAT|DELETE|SelectFirst|FROM|From|Where|WHERE|where|selectFirst|AND|and|dateToMilli|vars|simpleDateFormat|SimpleDateFormat|dateFormat|DateFormat|background|actionbarsubtitle|actionBarSubtitle|playSound|yesLabel|noLabel|timeout|timeoutExceededValue|backOnlyAfterNo|CrudBack|crud|setInfoView|dropTable|schedule|time|finishRecord|addDate|Select|maxCacheTime|minSpeed|show|periodicSync|SelectLast|entity|Speech|delete|insert|insertFields|insertFieldNotFillId|Sync|rowCount|disableNotifyMessage|disableGpsRestartOnResume|selectDistinctField|selectField|selectLast|sumField|update|saveSyncOut|syncOutOnly|goToField|clear|cryptography|wait|after|snooze|repeat|updateSequenceGrid|sequenceGrid|UpdatePlayScreen)\\b"
+			"match": "\\b(maxFileSizeMB|maxFilesToKeep|saveBinary|sender|receiver|fileReceiver|password|restorePassword|maxBackupDays|quality|resolution|format|minTime|minDistance|minLastTime|tracking|onInsert|phoneNumber|hidePendingRecords|soundLoop|vibrateTime|vibrationLoop|sound|none|BarcodeError|AlertTimer|BarcodeRead|camera|minQuality|types|sizes|type|required|minBearing|syncInterval|waitForNetworkTimeout|connectionTimeout|readTimeout|httpStatusCode|originalCode|fields|labels|Back|sync|exit|ok|Ok|getRecords|inputEntity|listRecord|lang|onGetItemIconColor|OnGetItemBackgroundColor|onGetItemBackgroundColor|stopAlertTimer|stopSound|cancelSchedule|save|setStatusColor|concat|SumField|toast|select|from|UPDATE|SET|set|INSERT|Insert|INTO|VALUES|COUNT|CONCAT|DELETE|SelectFirst|FROM|From|Where|WHERE|where|selectFirst|AND|and|dateToMilli|vars|simpleDateFormat|SimpleDateFormat|dateFormat|DateFormat|background|actionbarsubtitle|actionBarSubtitle|playSound|yesLabel|noLabel|timeout|timeoutExceededValue|backOnlyAfterNo|CrudBack|crud|setInfoView|dropTable|schedule|time|finishRecord|addDate|Select|maxCacheTime|minSpeed|show|periodicSync|SelectLast|entity|Speech|delete|insert|insertFields|insertFieldNotFillId|Sync|rowCount|disableNotifyMessage|disableGpsRestartOnResume|selectDistinctField|selectField|selectLast|sumField|update|saveSyncOut|syncOutOnly|goToField|clear|cryptography|wait|after|snooze|repeat|updateSequenceGrid|sequenceGrid|UpdatePlayScreen|orderBy|onGetRecords|onItemClick)\\b"
 		},
 		{
 			"comment": "Azul Claro - Tipo de Dados com espaço",
@@ -68,7 +68,7 @@
 		{
 			"comment": "Laranja Negrito - Valores",
 			"name": "markup.bold",
-			"match": "\\b(PARTIAL|EAN8|UPCE|ISBN10|UPCA|EAN13|ISBN13|I25|DATABAR|DATABAR_EXP|CODABAR|CODE39|PDF417|QRCODE|CODE93|CODE128|manualDecimal|logo_simova|LEFT|CENTER|RIGHT|verifyEmptyEntity|out|currentDate|generateuuid|custom|cam|BarcodeBeep|beforeInstall|nfc|bt|backgroundIn|Background|Foreground|getGCMIdentifier|currentDateType|currentDateTypeIsValid|getYear|getMonth|getDay|getWeekDay|getHour|getMinutes|getSeconds|difDateMilli|getYearWeek|milliToDate|formatDateMilli|subStr|strLen|verifyemptyentity|roundFloat|getUuid|hasOfflineData)\\b"
+			"match": "\\b(PARTIAL|EAN8|UPCE|ISBN10|UPCA|EAN13|ISBN13|I25|DATABAR|DATABAR_EXP|CODABAR|CODE39|PDF417|QRCODE|CODE93|CODE128|manualDecimal|logo_simova|LEFT|CENTER|RIGHT|verifyEmptyEntity|out|currentDate|generateuuid|custom|Custom|cam|BarcodeBeep|beforeInstall|nfc|bt|backgroundIn|Background|Foreground|getGCMIdentifier|currentDateType|currentDateTypeIsValid|getYear|getMonth|getDay|getWeekDay|getHour|getMinutes|getSeconds|difDateMilli|getYearWeek|milliToDate|formatDateMilli|subStr|strLen|verifyemptyentity|roundFloat|getUuid|hasOfflineData)\\b"
 		},
 		{
 			"comment": "Azul Claro - Números",
